@@ -1,0 +1,43 @@
+*{
+    margin: 5;
+    color: black;
+}
+
+.header {
+    padding: 10px;
+    background-color: #FAEBD7;
+}
+
+.banner {
+    height: fit-content;
+    padding: 50px 0;
+    background-image: url(".././Site\ institucional/imagens/bkg3.jpg");
+    background-size: cover;
+}
+
+.banner .container {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FAEBD7;
+}
+h1 {
+    color: red;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    list-style: none;
+}
