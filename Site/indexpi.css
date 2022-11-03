@@ -1,43 +1,84 @@
-*{
-    margin: 5;
+body { /*cor de fundo e tudo do começo*/
+    background-color: #FFF8DC;
+    color: black;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 15px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px;
+
+}
+header { /*cabeçalho */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 20px solid #FAEBD7;
+}
+div#logo img{
+    position:absolute ;
+    max-width: 250px;
+    top: -40px;
+}
+li { /*ordem das coisa da header que vai virar link */
+    display: inline-block;
+    margin: 20px;
+}
+a { /*cor das coisa da header que vai virar link (menos a logo)*/
+    color: #e6bc18;
+}
+a :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
+    color: black;
+    transition: 0.3s all;
+}
+#curiosidade-btn{ /*edições das coisas que do botão que é pra virar um math.random*/
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+}
+#curiosidade-btn:hover{ /*hover do bagui acima*/
+    background-color: #e6bc18;
     color: black;
 }
+main { /*por enquanto distancia entre header e meio da page*/
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
 
-.header {
-    padding: 10px;
-    background-color: #FAEBD7;
 }
-
-.banner {
-    height: fit-content;
-    padding: 50px 0;
-    background-image: url(".././Site\ institucional/imagens/bkg3.jpg");
-    background-size: cover;
+h1 { /*coisas do titulo da page*/
+    font-size: 25px;
+    line-height: 10px;
+    font-style:unset;
+    font-family: 'Ubuntu', sans-serif;
 }
-
-.banner .container {
-    height: 300px;
+button {
+    display: flex;
     justify-content: center;
-    align-items: center;
-
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e6bc16;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
 }
 
-.container {
-    margin: 0 auto;
-    width: 80%;
+img { /*img page inicial */
+    width: 600px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #FAEBD7;
-}
-h1 {
-    color: red;
-    font-weight: 700;
-}
 
-ul {
+}
+.meio {
+    background-color: white;
     display: flex;
-    width: 300px;
-    justify-content: space-between;
-    list-style: none;
+    max-width: 1500px;
+}
+.footer {
+    background-color: #e6bc18;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
