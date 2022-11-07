@@ -1,54 +1,54 @@
+*{
+    margin: 10px;
+    padding: 0;
+}
 body { /*cor de fundo e tudo do começo*/
     background-color: #FFF8DC;
     color: black;
     font-family:'Ubuntu', sans-serif;
     font-size: 15px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 65px;
+    width: 100%;
+    /* margin: auto; */
+    /* padding: 65px; */
 
 }
 header { /*cabeçalho */
     display: flex;
     flex-direction: row;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 20px solid #FAEBD7;
 }
 div#logo img{
-    position:absolute ;
-    max-width: 250px;
-    top: -40px;
+    width: 200px;
+    height: 200px;
 }
 li { /*ordem das coisa da header que vai virar link */
     display: inline-block;
+    list-style: none;
     margin: 20px;
+    font-size: 15px;
 }
 a { /*cor das coisa da header que vai virar link (menos a logo)*/
     color: #e6bc18;
+    text-decoration: none;
 }
-a :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
+li :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
     color: black;
     transition: 0.3s all;
-}
-#curiosidade-btn{ /*edições das coisas que do botão que é pra virar um math.random*/
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 20px;
-}
-#curiosidade-btn:hover{ /*hover do bagui acima*/
-    background-color: #e6bc18;
-    color: black;
+
 }
 main { /*por enquanto distancia entre header e meio da page*/
     display: flex;
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 40px;
 
 }
 h1 { /*coisas do titulo da page*/
-    font-size: 25px;
+    font-size: 30px;
     line-height: 10px;
+    height: 50px;
     font-style:unset;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -65,15 +65,28 @@ button {
     cursor: pointer;
 }
 
-img { /*img page inicial */
+.fota { /*img page inicial */
     width: 600px;
     display: flex;
-
+    justify-content: center;
 }
 .meio {
     background-color: white;
     display: flex;
-    max-width: 1500px;
+    margin: 4%;
+    /* width: 80%; */
+}
+.a_curiosidade{ /*edições das coisas que do botão que é pra virar um math.random*/
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    
+}
+.a_curiosidade:hover{ /*hover do bagui acima*/
+    background-color: #e6bc18;
+    color: black;
+    cursor: pointer;
+
 }
 .footer {
     background-color: #e6bc18;
