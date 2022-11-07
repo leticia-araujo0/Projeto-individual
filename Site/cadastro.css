@@ -44,10 +44,15 @@ main { /*por enquanto distancia entre header e meio da page*/
     display: flex;
     flex-direction: row;
     margin-top: 60px;
-
-
-    /*daqui pra baixo é caixa de cadastro*/
 }
+
+
+
+
+
+
+
+/*ajeitar pois ta bugado*/
 .banner .container .card {
     background-color: #e6bc18;
     height: fit-content;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cadastro.css" rel="stylesheet">
+    <title> Vai ficar lindchu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="imagens/logo3.png"></a>
+        </div>
+        <ul>
+            <a href="./indexpi.html">
+                <li>Início</li>
+            </a>
+            <a href="./login.html">
+                <li>Entrar</li>
+            </a>
+            <a href="#">
+                <li>Seja membro</li>
+            </a>
+            <a href="#" id="curiosidade-btn">
+                <li>Conte-me uma curiosidade!</li>
+            </a>
+        </ul>
+    </header>
+
+    <div class="container tamanho-conteudo">
+        <div class="card medio">
+            <h2>Bem-vindo!</h2>
+            <div class="formulario">
+
+                <!--
+                     Para inserir mais um campo, copie uma das inputs abaixo.
+                     Assim que inserir vá para o script abaixo.
+                 -->
+
+                <span class="tipo_campo">Nome:</span>
+                <input id="nome_input" type="text" placeholder="Seu nome">
+
+                <span class="tipo_campo">E-mail:</span>
+                <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+
+                <span class="tipo_campo">Senha:</span>
+                <input id="senha_input" type="password" placeholder="******">
+
+                <span class="tipo_campo">Confirmação da Senha:</span>
+                <input id="confirmacao_senha_input" type="password" placeholder="******">
+
+                <span class="tipo_campo">CPF:</span>
+                <input id="cpf_input" type="text" placeholder="CPF">
+
+                <button class="btn" onclick="cadastrar()">Cadastrar</button>
+
+            </div>
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
+            </div>
+
+            <div id="div_erros_login">
+
+            </div>
+        </div>
+    </div>
+</div>

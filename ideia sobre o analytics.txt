@@ -1,0 +1,1 @@
+no analytics criar uma votação onde a pessoa cadastra nome,email, idade, o voto pode ser através de uma select
