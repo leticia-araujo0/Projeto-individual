@@ -1,51 +1,49 @@
+*{
+  margin: 10px;
+  padding: 0;
+}
 body { /*cor de fundo e tudo do começo*/
-    background-color: #FFF8DC;
-    color: black;
-    font-family:'Ubuntu', sans-serif;
-    font-size: 15px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 65px;
+  background-color: #FFF8DC;
+  color: black;
+  font-family:'Ubuntu', sans-serif;
+  font-size: 15px;
+  width: 100%;
+  /* margin: auto; */
+  /* padding: 65px; */
 
 }
 header { /*cabeçalho */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 20px solid #FAEBD7;
+  display: flex;
+  flex-direction: row;
+  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 15px solid #FAEBD7;
 }
 div#logo img{
-    position:absolute ;
-    max-width: 250px;
-    top: -40px;
+  width: 230px;
+  height: 230px;
 }
 li { /*ordem das coisa da header que vai virar link */
-    display: inline-block;
-    margin: 20px;
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+  font-size: 16px;
 }
 a { /*cor das coisa da header que vai virar link (menos a logo)*/
-    color: #e6bc18;
+  color: #e6bc18;
+  text-decoration: none;
 }
-a :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
-    color: black;
-    transition: 0.3s all;
-}
-#curiosidade-btn{ /*edições das coisas que do botão que é pra virar um math.random*/
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 20px;
-}
-#curiosidade-btn:hover{ /*hover do bagui acima*/
-    background-color: #e6bc18;
-    color: black;
+li :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
+  color: black;
+  transition: 0.3s all;
+
 }
 main { /*por enquanto distancia entre header e meio da page*/
-    display: flex;
-    flex-direction: row;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
 }
-
 
 
 
@@ -53,30 +51,37 @@ main { /*por enquanto distancia entre header e meio da page*/
 
 
 /*ajeitar pois ta bugado*/
-.banner .container .card {
+.container .card {
     background-color: #e6bc18;
-    height: fit-content;
-    width: 400px;
+    height: 450px;
+    width: 750px;
     display: flex;
     flex-direction: column;
     color: black;
+    justify-content: center;
     align-items: center;
-    border-radius: 20px
+    border-radius: 20px;
+    margin: 30px;
   }
   
   .card {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
   }
   
   .card h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
   
   .card h4 {
     font-size: 16px;
   }
   
+
+
+
+
   .banner #div_erros_login {
     margin-top: 15px;
   }

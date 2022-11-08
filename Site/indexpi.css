@@ -15,20 +15,20 @@ body { /*cor de fundo e tudo do começo*/
 header { /*cabeçalho */
     display: flex;
     flex-direction: row;
-    height: 100px;
+    height: 125px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 20px solid #FAEBD7;
+    border-bottom: 15px solid #FAEBD7;
 }
 div#logo img{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
 }
 li { /*ordem das coisa da header que vai virar link */
     display: inline-block;
     list-style: none;
     margin: 20px;
-    font-size: 15px;
+    font-size: 16px;
 }
 a { /*cor das coisa da header que vai virar link (menos a logo)*/
     color: #e6bc18;
@@ -44,9 +44,12 @@ main { /*por enquanto distancia entre header e meio da page*/
     flex-direction: row;
     margin-top: 40px;
 
+
+
+    
 }
 h1 { /*coisas do titulo da page*/
-    font-size: 30px;
+    font-size: 35px;
     line-height: 10px;
     height: 50px;
     font-style:unset;
@@ -66,9 +69,10 @@ button {
 }
 
 .fota { /*img page inicial */
-    width: 600px;
+    width: 450px;
+    height: 450px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .meio {
     background-color: white;
@@ -76,10 +80,12 @@ button {
     margin: 4%;
     /* width: 80%; */
 }
-.a_curiosidade{ /*edições das coisas que do botão que é pra virar um math.random*/
+.a_curiosidade{ /*css das coisas do botão que é pra virar um math.random*/
     border: 2px solid black;
     padding: 5px;
     border-radius: 20px;
+    width: 900px;
+    height: 900px;
     
 }
 .a_curiosidade:hover{ /*hover do bagui acima*/
@@ -88,9 +94,15 @@ button {
     cursor: pointer;
 
 }
+
+ /* da caixa de alerta das curiosidades */
+
+
+ 
+
 .footer {
     background-color: #e6bc18;
-    height: 150px;
+    height: 120px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
