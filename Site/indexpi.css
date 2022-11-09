@@ -1,9 +1,11 @@
 *{
-    margin: 10px;
-    padding: 0;
+    margin: 1px;
+    padding: 4px;
 }
 body { /*cor de fundo e tudo do começo*/
-    background-color: #FFF8DC;
+    
+    /* background-color: #FFF8DC; */
+    background-image: linear-gradient(45deg, #e6bc18, #faebd7);
     color: black;
     font-family:'Ubuntu', sans-serif;
     font-size: 15px;
@@ -18,7 +20,7 @@ header { /*cabeçalho */
     height: 125px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 15px solid #FAEBD7;
+    /* border-bottom: 15px solid #FAEBD7; */
 }
 div#logo img{
     width: 230px;
@@ -28,7 +30,8 @@ li { /*ordem das coisa da header que vai virar link */
     display: inline-block;
     list-style: none;
     margin: 20px;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
 }
 a { /*cor das coisa da header que vai virar link (menos a logo)*/
     color: #e6bc18;
@@ -37,17 +40,30 @@ a { /*cor das coisa da header que vai virar link (menos a logo)*/
 li :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
     color: black;
     transition: 0.3s all;
+}
+.a_curiosidade{ /*css das coisas do botão que é pra virar um math.random*/
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    width: 900px;
+    height: 900px;
+    
+}
+.a_curiosidade:hover{ /*hover do bagui acima*/
+    background-color: #e6bc18;
+    color: black;
+    cursor: pointer;
 
 }
+
 main { /*por enquanto distancia entre header e meio da page*/
     display: flex;
     flex-direction: row;
     margin-top: 40px;
-
-
-
-    
 }
+
+
+
 h1 { /*coisas do titulo da page*/
     font-size: 35px;
     line-height: 10px;
@@ -77,28 +93,32 @@ button {
 .meio {
     background-color: white;
     display: flex;
-    margin: 4%;
-    /* width: 80%; */
+    justify-content: center;
+    margin: 5%;
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
 }
-.a_curiosidade{ /*css das coisas do botão que é pra virar um math.random*/
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 20px;
-    width: 900px;
-    height: 900px;
-    
+p {
+    margin-top: 15px;
+    line-height: 1.5;
 }
-.a_curiosidade:hover{ /*hover do bagui acima*/
-    background-color: #e6bc18;
-    color: black;
-    cursor: pointer;
-
-}
-
  /* da caixa de alerta das curiosidades */
-
-
- 
+.curiosidadecss{
+    background-color: black;
+    color: #e6bc18;
+    border-radius: 20px;
+    border: double;
+    width: 300px;
+    height: 300px;
+}
+.jp {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer {
     background-color: #e6bc18;

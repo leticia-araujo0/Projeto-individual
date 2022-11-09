@@ -3,8 +3,10 @@
   padding: 0;
 }
 body { /*cor de fundo e tudo do começo*/
-  background-color: #FFF8DC;
+  /* background-color: #FFF8DC; */
+  background-image: linear-gradient(45deg, #faebd7, #e6bc18);
   color: black;
+  /* color:#FAEBD7; */
   font-family:'Ubuntu', sans-serif;
   font-size: 15px;
   width: 100%;
@@ -18,7 +20,7 @@ header { /*cabeçalho */
   height: 125px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 15px solid #FAEBD7;
+  /* border-bottom: 15px solid #FAEBD7; */
 }
 div#logo img{
   width: 230px;
@@ -29,27 +31,57 @@ li { /*ordem das coisa da header que vai virar link */
   list-style: none;
   margin: 20px;
   font-size: 16px;
+  font-weight: bold;
 }
 a { /*cor das coisa da header que vai virar link (menos a logo)*/
-  color: #e6bc18;
+  color: black;
   text-decoration: none;
 }
 li :hover{ /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
-  color: black;
+  color: #faebd7;
   transition: 0.3s all;
-
 }
+.a_curiosidade{ /*css das coisas do botão que é pra virar um math.random*/
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    width: 900px;
+    height: 900px;
+    
+}
+.a_curiosidade:hover{ /*hover do bagui acima*/
+    background-color: #faebd7;
+    color: black;
+    cursor: pointer;
+}
+
 main { /*por enquanto distancia entre header e meio da page*/
   display: flex;
   flex-direction: row;
   margin-top: 40px;
+}
 
-
+button {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #e6bc16;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+  background-color: #FFF8DC;
+  color: #e6bc18;
+}
 
 
 
     /*daqui pra baixo é caixa de login*/
-}
+
 .container {
   display: flex;
   justify-content: center;
@@ -57,13 +89,14 @@ main { /*por enquanto distancia entre header e meio da page*/
 
 .banner .container .card {
     background-color: #e6bc18;
-    height: 300px;
-    width: 500px;
+    height: 350px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     color: black;
     justify-content:center;
     align-items: center;
+    border: double 5px;
     border-radius: 20px;
     margin: 10px;
   }
