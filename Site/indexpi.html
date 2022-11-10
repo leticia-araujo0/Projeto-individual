@@ -29,9 +29,11 @@
     </header>
 
     <div id="alertafake" class="alertafake">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum eveniet illo, enim minus labore delectus doloremque ipsa eligendi facilis debitis neque eius quisquam eum voluptas illum ab, aliquid, cum at!
+        DEU CERTO
+        <!-- <div class="chibi"></div> -->
+        <!-- <img src="./chibialert.png" alt="minazinhadoalerta"> -->
     </div>
-    
+
     <main>
         <div id="texto">
             <br> <br> <br>
@@ -63,9 +65,11 @@
 
 
     <div class="explicar">
+        <img src="./encounter2.jpg" alt="encounter">
+    </div>
 
-        O que nós brasileiros chamamos de doramas são produções televisivas oriundas de países do leste
-        asiático,<br> principalmente Japão, Coreia do Sul, China, Taiwan e Tailândia.
+    <p>O que nós brasileiros chamamos de doramas são produções televisivas oriundas de países do leste
+        asiático, principalmente Japão, Coreia do Sul, China, Taiwan e Tailândia.
         É um formato parecido com séries e novelas e o gênero das produções pode variar desde romance,
         comédia, escolar, de época, drama, ficção e etc.
 
@@ -74,8 +78,6 @@
         são histórias com um roteiro bem fechadinho com início, meio e fim com em torno de 16 a
         20 episódios em média.
 
-        <div id="partedois"></div>
-
         Mas é preciso saber que a expressão "dorama" é a forma como os japoneses pronunciam a palavra
         "drama" que são as novelas japonesas, ou j-dramas (japanese dramas). A expressão se popularizou
         no Brasil em meados de 2009 quando as primeiras produções asiáticas desse gênero (fora animes e
@@ -83,54 +85,62 @@
         passar dos anos e a explosão do kpop mundialmente as produções sul-coreanas ganharam mais e
         mais espaço, sendo assim chamadas de doramas, da mesa forma que produções taiwanesas, chinesas e
         tailandesas também são chamadas dessa forma.
+    <p><br> <br> <br>
 
-        <p> A forma padrão de se referir aos dorama de acordo com o país seria </p>
+        <p1> A forma padrão de se referir aos dorama de acordo com o país seria: </p1>
+        <br> <br> <br>
 
-        <div class="jp">
-            <img src="./jp.png" alt="japaum">
-        </div>
-
-        Japão
-        Dorama /J-drama (Japanese drama)
-
-        Produções nipônicas costumam se passar em ambiente escolar ou a vida de adultos na casa dos 30.
-        É bastante comum que animes e mangás sejam adaptados para versão live-action (versão de anime com pessoas).
-        Costumam ter de 8 a 12 episódios com duração de 40 minutos.
-
-        Alguns dos mais populares
+        <i>
+            <p2>Japão <br>
+        </i>
+        <b>Dorama /J-drama (Japanese Drama)</p2></b>
+    <div class="jp">
+        <img src="./jp.png" alt="japaum">
+    </div>
 
 
-        <div class="cds">
-            <img src="./cds.png" alt="coreia">
-        </div>
-        Coreia do Sul
-        K-drama (Korean drama)
+    Produções nipônicas costumam se passar em ambiente escolar ou a vida de adultos na casa dos 30.
+    É bastante comum que animes e mangás sejam adaptados para versão live-action (versão de anime com pessoas).
+    Costumam ter de 8 a 12 episódios com duração de 40 minutos.
 
-        Costumam ter de 16 a 20 episódios quase sempre com duração superior a 1h por episódio, chegando
-        a ter doramas com episódios de 1h40
 
-        Alguns dos mais populares
+    <i>
+        <p2>Coreia do Sul <br>
+    </i>
+    <b>K-drama (Korean drama)</p2></b>
+    <div class="cds">
+        <img src="./cds.png" alt="coreia">
+    </div>
 
-        <div class="china">
-            <img src="./china.png" alt="china">
-        </div>
-        China
-        C-drama (Chinese drama)
-        As produções chinesas costumam ter um número elevado de episódio, por volta de 40 com duração
-        média de 50 minutos cada.
+    Costumam ter de 16 a 20 episódios quase sempre com duração superior a 1h por episódio, chegando
+    a ter doramas com episódios de 1h40
 
-        Alguns dos mais populares
 
-        <div id=class>
-            <img src="./thai.png" alt="thai">
-        </div>
+    <i>
+        <p2>China<br>
+    </i>
+    <b>C-drama (Chinese drama)</p2></b>
+    <div class="china">
+        <img src="./china.png" alt="china">
+    </div>
 
-        Tailândia
-        Thai drama / Lakorn
-        É correto utilizar o termo thai drama, porém a palavra lakorn que significa drama/série televisa,
-        é mais "correta" pois faz parte do vocabulário do idioma.
+    As produções chinesas costumam ter um número elevado de episódio, por volta de 40 com duração
+    média de 50 minutos cada.
 
-        Alguns dos mais populares
+
+    <i>
+        <p2>Tailândia<br>
+    </i>
+    <b>Thai drama / Lakorn</p2></b>
+
+    <div id=class>
+        <img src="./thai.png" alt="thai">
+    </div>
+
+    É correto utilizar o termo thai drama, porém a palavra lakorn que significa drama/série televisa,
+    é mais "correta" pois faz parte do vocabulário do idioma.
+
+    Alguns dos mais populares
 
     </div>
 
@@ -140,5 +150,71 @@
     </div>
 
 </body>
+
+
+
+
+<script>
+    function curiosidade() {
+
+        var sorteio = parseInt(1 + Math.random() * 15)
+
+        if (sorteio == 1) {
+            alertafake.innerHTML = `O ator japonês Miura Haruma e a atriz
+             sul-coreana Park ShinHye fizeram um ensaio fotográfico juntos para Céci em 2013`
+        }
+        if (sorteio == 2) {
+            alertafake.innerHTML = `SongKang treinou balé por cerca de 5 meses para o dorama Navillera`
+        }
+        if (sorteio == 3) {
+            alertafake.innerHTML = `A atriz mais nova a ganhar um Baeksang de Melhor Nova Atriz 
+            de TV foi a HeoYool aos 8 anos pelo papel em 'Mother`
+        }
+        if (sorteio == 4) {
+            alertafake.innerHTML = `Jung HaeIn se alistou no exército antes de debutar como ator`
+        }
+        if (sorteio == 5) {
+            alertafake.innerHTML = `Na época das gravações de My Boss My Hero Tomoya Nagase tinha
+             28 anos e Yui Aragaki 18`
+        }
+        if (sorteio == 6) {
+            alertafake.innerHTML = `Em outubro de 2021 Round 6 se tornou a série mais vista na história
+             da Netflix com audiência de 111 milhões de contas`
+        }
+        if (sorteio == 7) {
+            alertafake.innerHTML = `Em 2021 uma tia de Ryu JunYeol que mora no Brasil lhe enviou uma 
+            caixa de bombons da Garoto e o mesmo postou em seu Instagram dizendo gostra muito do chocolate`
+        }
+        if (sorteio == 8) {
+            alertafake.innerHTML = `2Gether foi o primeiro trabalho na TV do ator tailandês Win`
+        }
+        if (sorteio == 9) {
+            alertafake.innerHTML = `O protagonista de Alice in Borderland se chama Arisu que é a 
+            tradução/pronúncia japonesa para Alice`
+        }
+        if (sorteio == 10) {
+            alertafake.innerHTML = `Em 2006 Lee MinHo e Jung IlWoo se envolveram em um gravíssimo acidente de
+            carro junto que quase tirou a vida de ambos`
+        }
+        if (sorteio == 11) {
+            alertafake.innerHTML = `Doramas chineses quase sempre são dublados no próprio idioma pois como 
+            o país possui diversos dialetos e sotaques é preciso "neutraliza-lo" para que em todas as partes
+            do país seja compreensível.`
+        }
+        if (sorteio == 12) {
+            alertafake.innerHTML = `12`
+        }
+        if (sorteio == 13) {
+            alertafake.innerHTML = `13`
+        }
+        if (sorteio == 14) {
+            alertafake.innerHTML = `14`
+        }
+        if (sorteio == 15) {
+            alertafake.innerHTML = `15`
+        }
+
+    }
+</script>
 
 </html>
