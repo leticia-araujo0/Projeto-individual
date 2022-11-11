@@ -4,7 +4,7 @@
 }
 body { /*cor de fundo e tudo do começo*/
   /* background-color: #FFF8DC; */
-  background-image: linear-gradient(45deg, #faebd7, #e6bc18);
+  background-image: linear-gradient(60deg, #faebd7, #e6bc18);
   color: black;
   /* color:#FAEBD7; */
   font-family:'Ubuntu', sans-serif;

@@ -29,9 +29,8 @@
     </header>
 
     <div id="alertafake" class="alertafake">
-        DEU CERTO
-        <!-- <div class="chibi"></div> -->
-        <!-- <img src="./chibialert.png" alt="minazinhadoalerta"> -->
+        <button onclick="fake()">X</button>
+        <div id="alertafakee"></div>
     </div>
 
     <main>
@@ -47,6 +46,9 @@
             <h3 class="titulo">Mas afinal, o que são doramas?</h3>
 
             <button>Clique aqui e saiba!</button>
+
+            <h3 class="titulo">Participe da votação MeloDoramática 2022!</h3>
+            <a href="./enquete.html" class="a_enquete" onclick="enquete()">Vote aqui nos indicados</a>
 
         </div>
 
@@ -64,11 +66,11 @@
     <!-- criei um arquivo a parte-->
 
 
-    <div class="explicar">
-        <img src="./encounter2.jpg" alt="encounter">
-    </div>
+        <div class="explicar">
+            <img src="./encounter2.jpg" alt="encounter">
+        </div>
 
-    <p>O que nós brasileiros chamamos de doramas são produções televisivas oriundas de países do leste
+        <p> O que nós brasileiros chamamos de doramas são produções televisivas oriundas de países do leste
         asiático, principalmente Japão, Coreia do Sul, China, Taiwan e Tailândia.
         É um formato parecido com séries e novelas e o gênero das produções pode variar desde romance,
         comédia, escolar, de época, drama, ficção e etc.
@@ -99,23 +101,23 @@
     </div>
 
 
-    Produções nipônicas costumam se passar em ambiente escolar ou a vida de adultos na casa dos 30.
+    <p>Produções nipônicas costumam se passar em ambiente escolar ou a vida de adultos na casa dos 30.
     É bastante comum que animes e mangás sejam adaptados para versão live-action (versão de anime com pessoas).
-    Costumam ter de 8 a 12 episódios com duração de 40 minutos.
+    Costumam ter de 8 a 12 episódios com duração de 40 minutos.</p>
 
 
     <i>
         <p2>Coreia do Sul <br>
-    </i>
-    <b>K-drama (Korean drama)</p2></b>
-    <div class="cds">
+        </i>
+        <b>K-drama (Korean drama)</p2></b>
+        <div class="cds">
         <img src="./cds.png" alt="coreia">
     </div>
 
     Costumam ter de 16 a 20 episódios quase sempre com duração superior a 1h por episódio, chegando
     a ter doramas com episódios de 1h40
 
-
+    <br> <br>
     <i>
         <p2>China<br>
     </i>
@@ -126,11 +128,11 @@
 
     As produções chinesas costumam ter um número elevado de episódio, por volta de 40 com duração
     média de 50 minutos cada.
-
-
+    
+    <br> <br>
     <i>
         <p2>Tailândia<br>
-    </i>
+        </i>
     <b>Thai drama / Lakorn</p2></b>
 
     <div id=class>
@@ -139,8 +141,6 @@
 
     É correto utilizar o termo thai drama, porém a palavra lakorn que significa drama/série televisa,
     é mais "correta" pois faz parte do vocabulário do idioma.
-
-    Alguns dos mais populares
 
     </div>
 
@@ -152,68 +152,76 @@
 </body>
 
 
+    
 
 
 <script>
-    function curiosidade() {
+    var divAlerta = document.getElementById('alertafake').style
+    
+    function fake() {
+        divAlerta.display = "none   "
+    }
+    function curiosidade() {   
+        divAlerta.display = "flex"
 
         var sorteio = parseInt(1 + Math.random() * 15)
 
         if (sorteio == 1) {
-            alertafake.innerHTML = `O ator japonês Miura Haruma e a atriz
+            alertafakee.innerHTML = `O ator japonês Miura Haruma e a atriz
              sul-coreana Park ShinHye fizeram um ensaio fotográfico juntos para Céci em 2013`
         }
         if (sorteio == 2) {
-            alertafake.innerHTML = `SongKang treinou balé por cerca de 5 meses para o dorama Navillera`
+            alertafakee.innerHTML = `SongKang treinou balé por cerca de 5 meses para o dorama Navillera`
         }
         if (sorteio == 3) {
-            alertafake.innerHTML = `A atriz mais nova a ganhar um Baeksang de Melhor Nova Atriz 
-            de TV foi a HeoYool aos 8 anos pelo papel em 'Mother`
+            alertafakee.innerHTML = `A atriz mais nova a ganhar um Baeksang de Melhor Nova Atriz 
+            de TV foi a HeoYool aos 8 anos pelo papel eno dorama Mother`
         }
         if (sorteio == 4) {
-            alertafake.innerHTML = `Jung HaeIn se alistou no exército antes de debutar como ator`
+            alertafakee.innerHTML = `Jung HaeIn se alistou no exército antes de debutar como ator`
         }
         if (sorteio == 5) {
-            alertafake.innerHTML = `Na época das gravações de My Boss My Hero Tomoya Nagase tinha
+            alertafakee.innerHTML = `Na época das gravações de My Boss My Hero Tomoya Nagase tinha
              28 anos e Yui Aragaki 18`
         }
         if (sorteio == 6) {
-            alertafake.innerHTML = `Em outubro de 2021 Round 6 se tornou a série mais vista na história
+            alertafakee.innerHTML = `Em outubro de 2021 Round 6 se tornou a série mais vista na história
              da Netflix com audiência de 111 milhões de contas`
         }
         if (sorteio == 7) {
-            alertafake.innerHTML = `Em 2021 uma tia de Ryu JunYeol que mora no Brasil lhe enviou uma 
+            alertafakee.innerHTML = `Em 2021 uma tia de Ryu JunYeol que mora no Brasil lhe enviou uma 
             caixa de bombons da Garoto e o mesmo postou em seu Instagram dizendo gostra muito do chocolate`
         }
         if (sorteio == 8) {
-            alertafake.innerHTML = `2Gether foi o primeiro trabalho na TV do ator tailandês Win`
+            alertafakee.innerHTML = `2Gether foi o primeiro trabalho na TV do ator tailandês Win`
         }
         if (sorteio == 9) {
-            alertafake.innerHTML = `O protagonista de Alice in Borderland se chama Arisu que é a 
+            alertafakee.innerHTML = `O protagonista de Alice in Borderland se chama Arisu que é a 
             tradução/pronúncia japonesa para Alice`
         }
         if (sorteio == 10) {
-            alertafake.innerHTML = `Em 2006 Lee MinHo e Jung IlWoo se envolveram em um gravíssimo acidente de
+            alertafakee.innerHTML = `Em 2006 Lee MinHo e Jung IlWoo se envolveram em um gravíssimo acidente de
             carro junto que quase tirou a vida de ambos`
         }
         if (sorteio == 11) {
-            alertafake.innerHTML = `Doramas chineses quase sempre são dublados no próprio idioma pois como 
+            alertafakee.innerHTML = `Doramas chineses quase sempre são dublados no próprio idioma pois como 
             o país possui diversos dialetos e sotaques é preciso "neutraliza-lo" para que em todas as partes
             do país seja compreensível.`
         }
         if (sorteio == 12) {
-            alertafake.innerHTML = `12`
+            alertafakee.innerHTML = `Choi WooShik (Parasita) protagonizou o videoclipe Congratulations da 
+            banda DAY6`
         }
         if (sorteio == 13) {
-            alertafake.innerHTML = `13`
+            alertafakee.innerHTML = `13`
         }
         if (sorteio == 14) {
-            alertafake.innerHTML = `14`
+            alertafakee.innerHTML = `14`
         }
         if (sorteio == 15) {
-            alertafake.innerHTML = `15`
+            alertafakee.innerHTML = `15`
         }
-
+        
     }
 </script>
 

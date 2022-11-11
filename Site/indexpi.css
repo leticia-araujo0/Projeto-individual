@@ -7,7 +7,7 @@ body {
     /*cor de fundo e tudo do começo*/
 
     /* background-color: #FFF8DC; */
-    background-image: linear-gradient(45deg, #e6bc18, #faebd7);
+    background-image: linear-gradient(60deg, #e6bc18, #faebd7);
     color: black;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
@@ -15,6 +15,11 @@ body {
     /* margin: auto; */
     /* padding: 65px; */
 
+}
+div#logo img {
+    margin-top: 10%;
+    width: 230px;
+    height: 230px;
 }
 
 header {
@@ -25,12 +30,6 @@ header {
     justify-content: space-between;
     align-items: center;
     /* border-bottom: 15px solid #FAEBD7; */
-}
-
-div#logo img {
-    margin-top: 10%;
-    width: 230px;
-    height: 230px;
 }
 
 li {
@@ -57,10 +56,10 @@ li :hover {
 .a_curiosidade {
     /*css das coisas do botão que é pra virar um math.random*/
     border: 2px solid black;
-    padding: 5px;
+    padding: 3px;
     border-radius: 20px;
-    width: 900px;
-    height: 900px;
+    width: 700px;
+    height: 700px;
 
 }
 
@@ -71,18 +70,37 @@ li :hover {
     cursor: pointer;
 
 }
+.a_enquete {
+    background-color: #faebd7;
+    color: black;
+    border: 2px solid #e6bc18;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    height: 30px; 
+    font-weight: bolder; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
+}
+.a_enquete:hover {
+    /*hover do bagui acima*/
+    background-color: black;
+    color: #e6bc18;
+    cursor: pointer;
 
-
-
-
+}
 main {
-    /*por enquanto distancia entre header e meio da page*/
     display: flex;
     flex-direction: row;
     margin-top: 40px;
     margin-left: 3%;
 }
+
+
+
+
 
 .titulo {
     padding: 5px;
@@ -102,7 +120,7 @@ h1 {
 
 button {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     width: 200px;
     height: 40px;
     border-radius: 20px;
@@ -110,6 +128,7 @@ button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -122,26 +141,20 @@ button {
 }
 
 /* da caixa de alerta das curiosidades */
-.curiosidadecss {
-    background-color: black;
-    color: #e6bc18;
-    border-radius: 20px;
-    border: double;
-    width: 300px;
-    height: 300px;
-}
+
 
 .alertafake {
-    background-color: #FFFACD;
-    display: flex;
+    background-color: white;
+    display: none;
     padding: 10px;
     /* display: none;  descomitar isso e comitar pra ver como ta ficando o alertx  fake */
     margin-left: 380px;
     align-items: center;
-    /* position: absolute; */
+    position: absolute;
+    z-index: 50;
     height: 90px;
     width: 400px;
-    color: #FF6347;
+    color: #BC8F8F;
     border: ridge 10px;
     border-radius: 8px;
     font-weight: bold;
@@ -150,29 +163,26 @@ button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* .alertafake .chibi{ --------- INVENTEI MODA */
-/* height: 10px; */
-/* width: 20px; */
-/* margin-top: 20px; */
-/* } */
-
-
 .explicar {
     display: flex;
     font-size: 25px;
     justify-content: space-around;
+    vertical-align: baseline;
 }
 
 .explicar img {
-    width: 500px;
-    display: inline-block;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    
 
 }
-
-p {
+/* tag dos textos de conteúdo */
+p { 
     text-align: justify;
     font-size: 18px;
-
+    margin: 50px;
+   
 }
 
 p1 {
@@ -186,6 +196,7 @@ p2 {
     color: red;
     font-weight: bolder;
     font-size: 20px;
+    margin: 50px;
 }
 
 .jp {
@@ -194,15 +205,19 @@ p2 {
     height: 200px;
     justify-content: center;
     align-items: center;
+    margin: 50px;
 }
 
 .cds {
     display: flex;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     justify-content: center;
     align-items: center;
+    margin: 90px;
+    
 }
+
 
 .footer {
     background-color: #e6bc18;
