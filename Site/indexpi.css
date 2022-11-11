@@ -152,7 +152,7 @@ button {
     align-items: center;
     position: absolute;
     z-index: 50;
-    height: 90px;
+    height: auto;
     width: 400px;
     color: #BC8F8F;
     border: ridge 10px;
@@ -163,6 +163,10 @@ button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.alertafake .fechar {
+    background-color: #FF6347;
+    position:relative;
+}
 .explicar {
     display: flex;
     font-size: 25px;
