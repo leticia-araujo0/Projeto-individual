@@ -37,7 +37,7 @@ li {
     display: inline-block;
     list-style: none;
     margin: 20px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -166,60 +166,6 @@ button {
 .alertafake .fechar {
     background-color: #FF6347;
     position:relative;
-}
-.explicar {
-    display: flex;
-    font-size: 25px;
-    justify-content: space-around;
-    vertical-align: baseline;
-}
-
-.explicar img {
-    width: 400px;
-    display: flex;
-    align-items: flex-start;
-    
-
-}
-/* tag dos textos de conteúdo */
-p { 
-    text-align: justify;
-    font-size: 18px;
-    margin: 50px;
-   
-}
-
-p1 {
-    text-align: justify;
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-p2 {
-    color: red;
-    font-weight: bolder;
-    font-size: 20px;
-    margin: 50px;
-}
-
-.jp {
-    display: flex;
-    width: 200px;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-}
-
-.cds {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    margin: 90px;
-    
 }
 
 

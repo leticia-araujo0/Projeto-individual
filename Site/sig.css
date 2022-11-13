@@ -1,0 +1,277 @@
+* {
+    margin: 10px;
+    padding: 0;
+}
+
+body {
+    /*cor de fundo e tudo do começo*/
+
+    /* background-color: #FFF8DC; */
+    background-image: linear-gradient(60deg, #e6bc18, #faebd7);
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    /* margin: auto; */
+    /* padding: 65px; */
+
+}
+
+div#logo img {
+    margin-top: 10%;
+    width: 230px;
+    height: 230px;
+}
+
+header {
+    /*cabeçalho */
+    display: flex;
+    flex-direction: row;
+    height: 125px;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 15px solid #FAEBD7; */
+}
+
+li {
+    /*ordem das coisa da header que vai virar link */
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    /*cor das coisa da header que vai virar link (menos a logo)*/
+    color: #e6bc18;
+    text-decoration: none;
+}
+
+li :hover {
+    /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
+    color: black;
+    transition: 0.3s all;
+}
+
+.a_curiosidade {
+    /*css das coisas do botão que é pra virar um math.random*/
+    border: 2px solid black;
+    padding: 3px;
+    border-radius: 20px;
+    width: 700px;
+    height: 700px;
+
+}
+
+.a_curiosidade:hover {
+    /*hover do bagui acima*/
+    background-color: #e6bc18;
+    color: black;
+    cursor: pointer;
+
+}
+
+.a_enquete {
+    background-color: #faebd7;
+    color: black;
+    border: 2px solid #e6bc18;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.a_enquete:hover {
+    /*hover do bagui acima*/
+    background-color: black;
+    color: #e6bc18;
+    cursor: pointer;
+
+}
+
+
+
+
+.container {
+    box-sizing: border-box;
+    width: 80%;
+    height: 100vh;
+    margin: 50px;
+    align-items: center;
+
+}
+
+.explicar {
+    width: 500px;
+    left: 5%;
+    top: 20%;
+    display: flex;
+}
+
+.explicar img {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+p0 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 40px;
+    height: 45vh;
+}
+
+/* tag dos textos de conteúdo */
+p {
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 18px;
+    margin: 10px;
+    height: 45vh;
+}
+
+/* titulos */
+p1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 90px;
+    height: 45vh;
+}
+
+
+/* coisas do japão */
+.containerjp {
+    box-sizing: border-box;
+    width: 80%;
+    height: 30vh;
+    margin: 50px;
+    align-items: center;
+}
+
+/* bandeira japão */
+.jp {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    height: 10vh;
+}
+.jp img{
+    width: 900px;
+    height: 500px;
+}
+
+/* texto japão */
+p2 {
+    color: red;
+    font-weight: bolder;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 18px;
+    margin: 10px;
+    height: 45vh;
+}
+
+/* texto da coreia */
+
+.containercds {
+    box-sizing: border-box;
+    width: 80%;
+    height: 20vh;
+    margin: 50px;
+    align-items: center;
+}
+
+.cds {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    height: 15vh;
+}
+.cds img{
+    width: 900px;
+    height: 500px;
+}
+
+p2 {
+    color: red;
+    display: flex;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: justify;
+    height: 5vh;
+    right: 5%;
+    left: 5%;
+}
+
+/* coisas */
+.cointainerch{
+    box-sizing: border-box;
+    width: 80%;
+    height: 20vh;
+    margin: 50px;
+    align-items: center;
+}
+.china{
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    height: 15vh;
+}
+.china img{
+    width: 900px;
+    height: 500px;
+}
+p3 {
+    color: red;
+    display: flex;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: justify;
+    height: 5vh;
+    right: 5%;
+    left: 5%;
+}
+
+/* coisas tailandia */
+.containerthai{
+    box-sizing: border-box;
+    width: 80%;
+    height: 100vh;
+    margin: 50px;
+    align-items: center;
+}
+.thai{
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    height: 40vh;
+}
+.thai img{
+    width:900px;
+    height: 500px;
+}
+p4 {
+    color: red;
+    display: flex;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: justify;
+    height: 5vh;
+}
