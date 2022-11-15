@@ -3,7 +3,7 @@ BACKUP KAKAKA */
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 2;
 }
 
 body {
@@ -123,7 +123,7 @@ nav {
 }
 
 
-h5 {
+h1 {
     /*coisas do titulo da page*/
     font-size: 35px;
     line-height: 10px;
@@ -193,18 +193,15 @@ button {
     width: 80%;
     height: 115vh;
     margin: 50px;
-    
+   
 }
 
 .explicar {
     width: 500px;
     height: 65vh;
-    margin: 10px;
     left: 5%;
     top: 50%;
     display: flex;
-    float: left; 
-    /* talvez tirar float */
     
 }
 
@@ -216,27 +213,22 @@ button {
     align-items: center;
     
 }
-section {
-    width: 80%;
-}
-/* títulos em negrito */
-h1 {
-    display: flex;
-    align-items: flex-end;
+/* títulos em negrit */
+p0 {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
     margin: 40px;
-    /* height: 35vh; */
+    height: 35vh;
 }
 
-/*  textos de conteúdo */
+/* tag dos textos de conteúdo */
 p {
     text-align: justify;
-    /* text-indent: 50px; */
+    text-indent: 50px;
     font-size: 18px;
     margin: 10px;
-    /* height: 85vh; */
+    height: 85vh;
 }
 
 /* coisas do japão */
@@ -247,28 +239,11 @@ p {
     margin: 50px;
     align-items: center;
 }
-/* nome países */
-h2 {
-    color: #dc4126;
-    font-weight: bold;
-    font-style: italic;
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 23px;
-    margin: 10px;
-}
-
-/* explicação do dorama d ecada país */
-h3{
-    font-size: 15px;
-    margin: 20px;
-}
 
 /* bandeira japão */
 .jp {
     display: flex;
-    width: 100px;
-    text-align: justify;
+    width: 200px;
     justify-content: center;
     align-items: center;
     margin: 80px;
@@ -276,17 +251,34 @@ h3{
     float: left;
 }
 .jp img{
-    width: 600px;
-    height: 400px;
+    width: 900px;
+    height: 500px;
 }
 
+/* nome países */
+p2 {
+    color: #dc4126;
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 18px;
+    margin: 50px;
+    height: 45vh;
+}
 
-/*  coreia */
+/* texto da coreia */
+
+.containercds {
+    box-sizing: border-box;
+    width: 80%;
+    height: 20vh;
+    margin: 50px;
+    align-items: center;
+}
 
 .cds {
     display: flex;
-    width: 100px;
-    text-align: justify;
+    width: 200px;
     justify-content: center;
     align-items: center;
     margin: 80px;
@@ -294,49 +286,63 @@ h3{
     float: left;
 }
 .cds img{
-    width: 600px;
-    height: 400px;
+    width: 900px;
+    height: 500px;
 }
 
 /* coisas da china não da shein kkkk */
+.cointainerch{
+    box-sizing: border-box;
+    width: 80%;
+    height: 20vh;
+    margin: 50px;
+    align-items: center;
+    text-align: justify;
+}
 .china{
     display: flex;
-    width: 100px;
-    text-align: justify;
+    width: 200px;
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 0vh;
+    height: 8vh;
     float: left;
-    
 }
 .china img{
-    width: 600px;
-    height: 400px;
+    width: 900px;
+    height: 500px;
 }
 
 /* coisas tailandia */
+.containerthai{
+    box-sizing: border-box;
+    width: 80%;
+    height: 20vh;
+    margin: 50px;
+    align-items: center;
+    
+}
 .thai{
     display: flex;
-    width: 100px;
-    text-align: justify;
+    width: 200px;
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 0vh;
+    height: 5vh;
     float: left;
-      
+    
+    
 }
 .thai img{
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
     
 }
 
 
 
 .footer {
-    background-color: #faebd7;
+    background-color: #e6bc18;
     height: 120px;
     display: flex;
     align-items: flex-end;

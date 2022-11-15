@@ -96,12 +96,10 @@ li :hover {
 }
 
 
-
-
 .container {
     box-sizing: border-box;
     width: 80%;
-    height: 100vh;
+    height: 115vh;
     margin: 50px;
     align-items: center;
 
@@ -109,24 +107,28 @@ li :hover {
 
 .explicar {
     width: 500px;
+    height: 65vh;
     left: 5%;
-    top: 20%;
+    top: 50%;
     display: flex;
+    
 }
 
 .explicar img {
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 350px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
-
+/* títulos em negrit */
 p0 {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
     margin: 40px;
-    height: 45vh;
+    height: 35vh;
 }
 
 /* tag dos textos de conteúdo */
@@ -135,18 +137,8 @@ p {
     text-indent: 50px;
     font-size: 18px;
     margin: 10px;
-    height: 45vh;
+    height: 85vh;
 }
-
-/* titulos */
-p1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 22px;
-    margin: 90px;
-    height: 45vh;
-}
-
 
 /* coisas do japão */
 .containerjp {
@@ -164,17 +156,18 @@ p1 {
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 10vh;
+    height: 0vh;
+    float: left;
 }
 .jp img{
     width: 900px;
     height: 500px;
 }
 
-/* texto japão */
+/* nome países */
 p2 {
-    color: red;
-    font-weight: bolder;
+    color: #dc4126;
+    font-weight: bold;
     text-align: justify;
     text-indent: 50px;
     font-size: 18px;
@@ -198,31 +191,22 @@ p2 {
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 15vh;
+    height: 0vh;
+    float: left;
 }
 .cds img{
     width: 900px;
     height: 500px;
 }
 
-p2 {
-    color: red;
-    display: flex;
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: justify;
-    height: 5vh;
-    right: 5%;
-    left: 5%;
-}
-
-/* coisas */
+/* coisas da china kkkk */
 .cointainerch{
     box-sizing: border-box;
     width: 80%;
     height: 20vh;
     margin: 50px;
     align-items: center;
+    text-align: justify;
 }
 .china{
     display: flex;
@@ -230,30 +214,22 @@ p2 {
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 15vh;
+    height: 8vh;
+    float: left;
 }
 .china img{
     width: 900px;
     height: 500px;
-}
-p3 {
-    color: red;
-    display: flex;
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: justify;
-    height: 5vh;
-    right: 5%;
-    left: 5%;
 }
 
 /* coisas tailandia */
 .containerthai{
     box-sizing: border-box;
     width: 80%;
-    height: 100vh;
+    height: 20vh;
     margin: 50px;
     align-items: center;
+    
 }
 .thai{
     display: flex;
@@ -261,17 +237,14 @@ p3 {
     justify-content: center;
     align-items: center;
     margin: 80px;
-    height: 40vh;
+    height: 5vh;
+    float: left;
+    
+    
 }
 .thai img{
-    width:900px;
+    width: 800px;
     height: 500px;
+    
 }
-p4 {
-    color: red;
-    display: flex;
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: justify;
-    height: 5vh;
-}
+    
