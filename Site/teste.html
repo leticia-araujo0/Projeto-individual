@@ -1,5 +1,5 @@
-<!-- BACKUP KAKAKA */
-/* TODA O HTML E CSS DA PARTE QUE EXPLICA O QUE SÃO DORAMAS -->
+/* BACKUP DA ENQUETE  */
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,10 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="indexpi.css" rel="stylesheet">
+    <link href="enquete.css" rel="stylesheet">
     <title> Vai ficar lindchu</title>
 
-    <link rel="icon" href="./imagens/icone.png">
+    <link rel="icon" href="./img/icone.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -23,235 +23,92 @@
             <a href="./indexpi.html"><img src="img/logo8.png"></a>
         </div>
         <ul>
-            <li> <a href="">Início</a></li>
-            <li> <a href="#sig">O que são doramas?</a></li>
+            <li> <a href="./indexpi.html">Início</a></li>
+            <li> <a href="./sig.html">O que são doramas?</a></li>
             <li> <a href="./login.html"> Login</a></li>
             <li> <a href="./cadastro.html">Seja membro</a></li>
-            <li> <a class="a_curiosidade" onclick="curiosidade()">Conte-me uma curiosidade!</a></li>
         </ul>
     </header>
 
-    <div id="alertafake" class="alertafake">
-        <button onclick="fake()" class="fechar">X</button>
-        <div id="alertafakee"></div>
-    </div>
 
-    <main>
-        <div id="texto">
-            <br> <br> <br>
-            <h1>Informações e curiosidades sobre
-                <br> <br> <br> <br>
-                o universo das séries asiáticas
-            </h1>
+    <div class="banner">
+        <div class="container">
+            <div class="card">
+                <h1>⭐ Premiação MeloDoramática KDramas 2022 🏆</h1>
+                <div class="formulario">
 
-            <br>
-
-            <h3 class="titulo">Participe da votação MeloDoramática 2022!</h3>
-            <a href="./enquete.html" class="a_enquete" onclick="enquete()">Vote aqui nos indicados</a>
-
-        </div>
-
-        <div class="fota">
-
-            <img src="img/banner3.png" alt="scrr">
-        </div>
-
-    </main>
-
-    <nav>
-
-    </nav>
-
-    <!-- arqv pra fazer os alerts -->
-    <script src="./curiosidade.js"></script>
-    <!-- criei um arquivo a parte-->
-
-    <div class="container" id="sig">
-        <p0>O que é exatamente...</p0>
-        <div class="explicar">
-
-            <img src="img/encounter2.jpg" alt="encounter">
-        </div>
+                    <h1>Categorias</h1>
 
 
-        <p> O que nós brasileiros chamamos de doramas são produções televisivas oriundas de países do leste
-            asiático, principalmente Japão, Coreia do Sul, China, Taiwan e Tailândia.
-            É um formato parecido com séries e novelas e o gênero das produções pode variar desde romance,
-            comédia, escolar, de época, drama, ficção e etc.
+                    <select class="votacao" id="sel_votacao">
+                        <option value="">Melhor Ator</option>
 
-            Os episódios costumas ser semanais, e a história geralmente gira em torno apenas de um núcleo
-            principal. É bem incomum que estas produções ganhem continuações, pois geralmente
-            são histórias com um roteiro bem fechadinho com início, meio e fim com em torno de 16 a
-            20 episódios em média.
+                        <option value="">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
+                        <option value="">Ahn HyoSeop (Business Proposal)</option>
+                        <option value="">Lee MinHo (Pachinko)</option>
+                        <option value="">RoWoon (Tomorrow)</option>
 
-            Mas é preciso saber que a expressão "dorama" é a forma como os japoneses pronunciam a palavra
-            "drama" que são as novelas japonesas, ou j-dramas (japanese dramas). A expressão se popularizou
-            no Brasil em meados de 2009 quando as primeiras produções asiáticas desse gênero (fora animes e
-            tokusatsus) a serem consumidas por aqui eram quase que exclusivamente vindas do Japão. Com o
-            passar dos anos e a explosão do kpop mundialmente as produções sul-coreanas ganharam mais e
-            mais espaço, sendo assim chamadas de doramas, da mesa forma que produções taiwanesas, chinesas e
-            tailandesas também são chamadas dessa forma.
-        <p>
-    </div>
+                    </select>
+                    <select class="votacao" id="sel_votacao">
+                        <option value="">Melhor Atriz</option>
 
-    </div>
-    <p0> A forma padrão de se referir aos dorama de acordo com o país seria: </p0>
-    <br>
-    <div class="box">
+                        <option value="">Park EunBin (Uma Advogada Extraordinária)</option>
+                        <option value="">Kim SeJeong (Business Proposal)</option>
+                        <option value="">Youn YuhJung (Pachinko)</option>
+                        <option value="">Jung So-min (Alquimia das Almas)</option>
 
-        <i>
-            <p2>Japão 
-        </i></p2>
-        <b>Dorama /J-drama (Japanese Drama)</b>
+                    </select>
 
-        <div class="containerjp">
+                    <select class="votacao" id="sel_votacao">
+                        <option value="">Melhor Dorama</option>
 
-            <div class="jp">
-                <img src="img/jp.png" alt="japaum">
+                        <option value="">Vinte Cinco, Vinte Um</option>
+                        <option value="">Business Proposal</option>
+                        <option value="">Pachinko</option>
+                        <option value="">Tomorrow</option>
+                        <option value="">Uma Advogada Extraordinária</option>
 
+                    </select>
+
+
+                    <button class="btn" onclick="entrar()">Votar!</button>
+
+
+                </div>
             </div>
-            <p>Produções nipônicas costumam se passar em ambiente escolar ou a vida de adultos na casa dos 30.
-                É bastante comum que animes e mangás sejam adaptados para versão live-action (versão de anime com
-                pessoas).
-                Costumam ter de 8 a 12 episódios com duração de 40 minutos.</p>
+
+
+            <div class="footer">
+                <!-- <div class="container2"> -->
+                                          
+                            <h2>Fale com a gente!</h2>
+                            
+                            <div id="redes" class="redeso">
+                                <li> <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt="logoinsta"></a> </li>
+                                <li> <a href="https://www.instagram.com/"> <img src="img/twitter.png" alt="logoinsta"></a> </li>
+                                
+                            </div>
+                            <div class="marca">
+
+                                <h3>Todos os direitos reservados - MeloDoramática &copy; 2022</h3>
+                            </div>
+                </div>
+            </div>
+
 
         </div>
-    </div>
-
-    <i>
-        <p2>Coreia do Sul
-    </i>
-
-    <b>K-drama (Korean drama)</p2></b>
-
-    <div class="containercds">
-        <div class="cds">
 
 
-            <img src="img/cds.png" alt="coreia">
-        </div>
-        <p> Costumam ter de 16 a 20 episódios quase sempre com duração superior a 1h por episódio, chegando
-            a ter doramas com episódios de 1h40</p>
 
     </div>
-    </div>
 
-    
+    <script>
 
-    <i><p2>China<br></i>
+        function enquete() {
+        }
 
-    <b>C-drama (Chinese drama)</p2></b>
-
-    <div class="containerch">
-        <div class="china">
-
-            <img src="img/china.png" alt="china">
-        </div>
-
-        <p> As produções chinesas costumam ter um número elevado de episódio, por volta de 40 com duração
-            média de 50 minutos cada. </p>
-
-    </div>
-    
-
-    <i><p2>Tailândia<br></i>
-    <b>Thai drama / Lakorn</p2></b>
-
-    <div class="containerthai">
-        <div class="thai">
-
-            <img src="img/thai.png" alt="thai">
-        </div>
-
-        <p> É correto utilizar o termo thai drama, porém a palavra lakorn que significa drama/série televisa,
-            é mais "correta" pois faz parte do vocabulário do idioma.</p>
-
-    </div>
-    </div>
-    </div>
-
-
-    <div class="footer">
-        <h4>Todos os direitos reservados - MeloDoramática &copy; 2022
-
-            
-
-    </div>
+    </script>
 
 </body>
-
-
-
-
-
-<script>
-    var divAlerta = document.getElementById('alertafake').style
-
-    function fake() {
-        divAlerta.display = "none   "
-    }
-    function curiosidade() {
-        divAlerta.display = "flex"
-
-        var sorteio = parseInt(1 + Math.random() * 15)
-
-        if (sorteio == 1) {
-            alertafakee.innerHTML = `O ator japonês Miura Haruma e a atriz
-             sul-coreana Park ShinHye fizeram um ensaio fotográfico juntos para Céci em 2013`
-        }
-        if (sorteio == 2) {
-            alertafakee.innerHTML = `SongKang treinou balé por cerca de 5 meses para o dorama Navillera`
-        }
-        if (sorteio == 3) {
-            alertafakee.innerHTML = `A atriz mais nova a ganhar um Baeksang de Melhor Nova Atriz 
-            de TV foi a HeoYool aos 8 anos pelo papel eno dorama Mother`
-        }
-        if (sorteio == 4) {
-            alertafakee.innerHTML = `Jung HaeIn se alistou no exército antes de debutar como ator`
-        }
-        if (sorteio == 5) {
-            alertafakee.innerHTML = `Na época das gravações de My Boss My Hero Tomoya Nagase tinha
-             28 anos e Yui Aragaki 18`
-        }
-        if (sorteio == 6) {
-            alertafakee.innerHTML = `Em outubro de 2021 Round 6 se tornou a série mais vista na história
-             da Netflix com audiência de 111 milhões de contas`
-        }
-        if (sorteio == 7) {
-            alertafakee.innerHTML = `Em 2021 uma tia de Ryu JunYeol que mora no Brasil lhe enviou uma 
-            caixa de bombons da Garoto e o mesmo postou em seu Instagram dizendo gostra muito do chocolate`
-        }
-        if (sorteio == 8) {
-            alertafakee.innerHTML = `2Gether foi o primeiro trabalho na TV do ator tailandês Win`
-        }
-        if (sorteio == 9) {
-            alertafakee.innerHTML = `O protagonista de Alice in Borderland se chama Arisu que é a 
-            tradução/pronúncia japonesa para Alice`
-        }
-        if (sorteio == 10) {
-            alertafakee.innerHTML = `Em 2006 Lee MinHo e Jung IlWoo se envolveram em um gravíssimo acidente de
-            carro junto que quase tirou a vida de ambos`
-        }
-        if (sorteio == 11) {
-            alertafakee.innerHTML = `Doramas chineses quase sempre são dublados no próprio idioma pois como 
-            o país possui diversos dialetos e sotaques é preciso "neutraliza-lo" para que em todas as partes
-            do país seja compreensível.`
-        }
-        if (sorteio == 12) {
-            alertafakee.innerHTML = `Choi WooShik (Parasita) protagonizou o videoclipe Congratulations da 
-            banda DAY6`
-        }
-        if (sorteio == 13) {
-            alertafakee.innerHTML = `13`
-        }
-        if (sorteio == 14) {
-            alertafakee.innerHTML = `14`
-        }
-        if (sorteio == 15) {
-            alertafakee.innerHTML = `15`
-        }
-
-    }
-</script>
 
 </html>

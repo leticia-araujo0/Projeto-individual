@@ -1,20 +1,21 @@
-/* TODA O HTML E CSS DA PARTE QUE EXPLICA O QUE SÃO DORAMAS
-BACKUP KAKAKA */
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     /*cor de fundo e tudo do começo*/
-
-    /* background-color: #FFF8DC; */
+    height: 100%;
     background-image: linear-gradient(60deg, #e6bc18, #faebd7);
     color: black;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    width: 100%;
+    font-size: 100%;
+    /* width: 100%; */
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
     /* margin: auto; */
     /* padding: 65px; */
 
@@ -80,7 +81,8 @@ li :hover {
     border-radius: 8px;
     padding: 10px;
     width: 200px;
-    height: 30px; 
+    height: 50px; 
+    text-align: center;
     font-weight: bolder; 
     display: flex;
     align-items: center;
@@ -96,6 +98,8 @@ li :hover {
 }
 main {
     display: flex;
+    position: relative;
+    margin: 0 auto;
     flex-direction: row;
     margin-top: 40px;
     margin-left: 3%;
@@ -173,13 +177,13 @@ button {
     border-radius: 8px;
     font-weight: bold;
     font-size: 19px;
-    text-align: justify;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .alertafake .fechar {
     background-color: #FF6347;
-    position:relative;
+    position:sticky ;
 }
 
 
@@ -188,6 +192,13 @@ button {
 
 
 /* o que são doramas */
+
+.parteum {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
 .container {
     box-sizing: border-box;
     width: 80%;
@@ -213,42 +224,79 @@ button {
     height: 350px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+
+}
+.titulo2 {
+    margin-top: 60px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
     
 }
-section {
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 980px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    padding-right: 15px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    box-shadow: 6px 6px 10px rgba(#e6bc16, #faebd7, black,0.377);
+    border-radius: 10px;
+    background-color: rgb(rgb(208, 142, 142), rgb(194, 18, 76), rgba(56, 169, 195, 0.556))
+}
+.card .foto{
+    width: 450px;
+
+}
+.card p {
+    text-align: center;
+}
+
+
+
+
+
+/* section {
     width: 80%;
 }
 /* títulos em negrito */
-h1 {
+/* h1 {
     display: flex;
     align-items: flex-end;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
-    margin: 40px;
+    margin: 40px; */
     /* height: 35vh; */
-}
+/* } */
 
 /*  textos de conteúdo */
-p {
+/* p {
     text-align: justify;
     /* text-indent: 50px; */
-    font-size: 18px;
+    /* font-size: 18px;
     margin: 10px;
     /* height: 85vh; */
-}
+/* } */ 
 
 /* coisas do japão */
-.containerjp {
+/* .containerjapao {
     box-sizing: border-box;
     width: 80%;
     height: 30vh;
     margin: 50px;
     align-items: center;
-}
+} */
 /* nome países */
-h2 {
+/* h2 {
     color: #dc4126;
     font-weight: bold;
     font-style: italic;
@@ -256,16 +304,16 @@ h2 {
     text-indent: 50px;
     font-size: 23px;
     margin: 10px;
-}
+} */
 
-/* explicação do dorama d ecada país */
-h3{
+/* explicação do dorama de cada país */
+/* h3{
     font-size: 15px;
     margin: 20px;
-}
+} */
 
 /* bandeira japão */
-.jp {
+/* .japao {
     display: flex;
     width: 100px;
     text-align: justify;
@@ -275,15 +323,15 @@ h3{
     height: 0vh;
     float: left;
 }
-.jp img{
+.japao img{
     width: 600px;
     height: 400px;
-}
+} */
 
 
 /*  coreia */
 
-.cds {
+/* .cds {
     display: flex;
     width: 100px;
     text-align: justify;
@@ -296,10 +344,10 @@ h3{
 .cds img{
     width: 600px;
     height: 400px;
-}
+} */
 
 /* coisas da china não da shein kkkk */
-.china{
+/* .china{
     display: flex;
     width: 100px;
     text-align: justify;
@@ -313,10 +361,10 @@ h3{
 .china img{
     width: 600px;
     height: 400px;
-}
+} */
 
 /* coisas tailandia */
-.thai{
+/* .thai{
     display: flex;
     width: 100px;
     text-align: justify;
@@ -331,7 +379,7 @@ h3{
     width: 600px;
     height: 400px;
     
-}
+} */ 
 
 
 

@@ -1,351 +1,266 @@
-/* TODA O HTML E CSS DA PARTE QUE EXPLICA O QUE SÃO DORAMAS
-BACKUP KAKAKA */
+
+/* BACKUP CCSS DA ENQUETE  */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=Ubuntu&display=swap');
 
 * {
-    margin: 0;
-    padding: 2;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    /*cor de fundo e tudo do começo*/
+  /*cor de fundo e tudo do começo*/
 
-    /* background-color: #FFF8DC; */
-    background-image: linear-gradient(60deg, #e6bc18, #faebd7);
-    color: black;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    width: 100%;
-    /* margin: auto; */
-    /* padding: 65px; */
+  /* background-color: #FFF8DC; */
+  background-image: linear-gradient(60deg, #e6bc18, #faebd7);
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  width: 100%;
+  /* margin: auto; */
+  /* padding: 65px; */
 
 }
+
 div#logo img {
-    margin-top: 10%;
-    width: 230px;
-    height: 230px;
+  margin-top: 10%;
+  width: 230px;
+  height: 230px;
 }
 
 header {
-    /*cabeçalho */
-    display: flex;
-    flex-direction: row;
-    height: 125px;
-    justify-content: space-between;
-    align-items: center;
-    /* border-bottom: 15px solid #FAEBD7; */
+  /*cabeçalho */
+  display: flex;
+  flex-direction: row;
+  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 15px solid #FAEBD7; */
 }
 
 li {
-    /*ordem das coisa da header que vai virar link */
-    display: inline-block;
-    list-style: none;
-    margin: 20px;
-    font-size: 16px;
-    font-weight: bold;
+  /*ordem das coisa da header que vai virar link */
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 a {
-    /*cor das coisa da header que vai virar link (menos a logo)*/
-    color: #e6bc18;
-    text-decoration: none;
+  /*cor das coisa da header que vai virar link (menos a logo)*/
+  color: #e6bc18;
+  text-decoration: none;
 }
 
 li :hover {
-    /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
-    color: black;
-    transition: 0.3s all;
+  /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
+  color: black;
+  transition: 0.3s all;
 }
 
 .a_curiosidade {
-    /*css das coisas do botão que é pra virar um math.random*/
-    border: 2px solid black;
-    padding: 3px;
-    border-radius: 20px;
-    width: 700px;
-    height: 700px;
+  /*css das coisas do botão que é pra virar um math.random*/
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 20px;
+  width: 700px;
+  height: 700px;
 
 }
 
-.a_curiosidade:hover {
-    /*hover do bagui acima*/
-    background-color: #e6bc18;
-    color: black;
-    cursor: pointer;
-
-}
 .a_enquete {
-    background-color: #faebd7;
-    color: black;
-    border: 2px solid #e6bc18;
-    border-radius: 8px;
-    padding: 10px;
-    width: 200px;
-    height: 30px; 
-    font-weight: bolder; 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  background-color: #faebd7;
+  color: black;
+  border: 2px solid #e6bc18;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  height: 30px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
 }
+
 .a_enquete:hover {
-    /*hover do bagui acima*/
-    background-color: black;
-    color: #e6bc18;
-    cursor: pointer;
+  /*hover do bagui acima*/
+  background-color: black;
+  color: #e6bc18;
+  cursor: pointer;
 
 }
+
 main {
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    margin-left: 3%;
-}
-nav {
-    width: 90%;
-    height: 50px;
-    display: flex;
-    margin: 20px;
-    /* border-bottom-style:dashed; */
-    
-    /* border-bottom: 1.5px solid pink; */
-    /* background-color: #1231427e; */
-    
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-left: 3%;
 }
 
 
 
 
 
-.titulo {
-    padding: 5px;
-    margin-top: 50px;
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  height: 50px;
 
 }
 
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #faebd7;
+  background-image: none;
+  border-radius: 20px
+}
 
-h1 {
-    /*coisas do titulo da page*/
-    font-size: 35px;
-    line-height: 10px;
-    height: 50px;
-    font-style: unset;
-    font-family: 'Ubuntu', sans-serif;
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background-color: black;
+  overflow: hidden;
+}
+
+select {
+  flex: 1;
+  padding: 0 .5em;
+  height: 30px;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-style: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.select::after {
+  /* content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em; */
+  background: #FAEBD7;
+  cursor: pointer;
+  /* pointer-events: none; */
+  /* transition: 25s all ease; */
+}
+
+.banner .container .card {
+  background-image: linear-gradient(60deg, #faebd7, #e6bc18);
+  height: 350px;
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.card {
+  display: flex;
+  height: 800px;
+  /* justify-content: space-around; */
+}
+
+.card h1 {
+  font-size: 25px;
 }
 
 button {
-    display: flex;
-    justify-content: center;    
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #e6bc16;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.fota {
-    /*img page inicial */
-    width: 450px;
-    height: 450px;
-    display: flex;
-    justify-content: flex-start;
+.btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #faebd7;
+  background-color: #e6bc18;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* da caixa de alerta das curiosidades */
+.btn:hover {
+  /*hover do bagui acima*/
+  background-color: #FAEBD7;
+  color: #e6bc18;
+  cursor: pointer;
 
-
-.alertafake {
-    background-color: white;
-    display: none;
-    padding: 10px;
-    /* display: none;  descomitar isso e comitar pra ver como ta ficando o alertx  fake */
-    margin-left: 380px;
-    align-items: center;
-    position: absolute;
-    z-index: 50;
-    height: auto;
-    width: 400px;
-    color: #BC8F8F;
-    border: ridge 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 19px;
-    text-align: justify;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-.alertafake .fechar {
-    background-color: #FF6347;
-    position:relative;
-}
-
-
-
-
-
-
-/* o que são doramas */
-.container {
-    box-sizing: border-box;
-    width: 80%;
-    height: 115vh;
-    margin: 50px;
-   
-}
-
-.explicar {
-    width: 500px;
-    height: 65vh;
-    left: 5%;
-    top: 50%;
-    display: flex;
-    
-}
-
-.explicar img {
-    width: 500px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-/* títulos em negrit */
-p0 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 22px;
-    margin: 40px;
-    height: 35vh;
-}
-
-/* tag dos textos de conteúdo */
-p {
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 18px;
-    margin: 10px;
-    height: 85vh;
-}
-
-/* coisas do japão */
-.containerjp {
-    box-sizing: border-box;
-    width: 80%;
-    height: 30vh;
-    margin: 50px;
-    align-items: center;
-}
-
-/* bandeira japão */
-.jp {
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    margin: 80px;
-    height: 0vh;
-    float: left;
-}
-.jp img{
-    width: 900px;
-    height: 500px;
-}
-
-/* nome países */
-p2 {
-    color: #dc4126;
-    font-weight: bold;
-    text-align: justify;
-    text-indent: 50px;
-    font-size: 18px;
-    margin: 50px;
-    height: 45vh;
-}
-
-/* texto da coreia */
-
-.containercds {
-    box-sizing: border-box;
-    width: 80%;
-    height: 20vh;
-    margin: 50px;
-    align-items: center;
-}
-
-.cds {
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    margin: 80px;
-    height: 0vh;
-    float: left;
-}
-.cds img{
-    width: 900px;
-    height: 500px;
-}
-
-/* coisas da china não da shein kkkk */
-.cointainerch{
-    box-sizing: border-box;
-    width: 80%;
-    height: 20vh;
-    margin: 50px;
-    align-items: center;
-    text-align: justify;
-}
-.china{
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    margin: 80px;
-    height: 8vh;
-    float: left;
-}
-.china img{
-    width: 900px;
-    height: 500px;
-}
-
-/* coisas tailandia */
-.containerthai{
-    box-sizing: border-box;
-    width: 80%;
-    height: 20vh;
-    margin: 50px;
-    align-items: center;
-    
-}
-.thai{
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    margin: 80px;
-    height: 5vh;
-    float: left;
-    
-    
-}
-.thai img{
-    width: 800px;
-    height: 500px;
-    
-}
-
-
 
 .footer {
-    background-color: #e6bc18;
+  background-color: #faebd7;
+  height: 190px;
+  width: 100%;
+  color: black;
+  display: flex; 
+  margin: 8px;
+}
+
+
+/* .container2 {
+    background-color: #faebd7;
     height: 120px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     margin-bottom: 1;
+} */
+h2{
+  font-family: 'Caveat', cursive;
+  text-align: center;
+
+}
+
+h3{
+  font-size: 14px;
+}
+
+div#redes img {
+  display: flex;
+  justify-content: flex-start;
+  width: 28px;
+  height: 28px;
+}
+.redeso{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.marca {
+  width: 80%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
 }
