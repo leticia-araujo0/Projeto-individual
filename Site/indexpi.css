@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=Ubuntu&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +8,14 @@
 
 body {
     /*cor de fundo e tudo do começo*/
-    height: 100%;
-    background-image: linear-gradient(60deg, #e6bc18, #faebd7);
-    color: black;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 100%;
-    /* width: 100%; */
-    margin: 0 auto;
-    padding: 15px;
-    max-width: 1200px;
-    /* margin: auto; */
-    /* padding: 65px; */
+  background-image: linear-gradient(60deg, #e6bc18, #faebd7);
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  width: 100%;
+  /* margin: auto; */
+  /* padding: 65px; */
+
 
 }
 div#logo img {
@@ -126,8 +124,7 @@ nav {
 
 }
 
-
-h5 {
+#texto h5 {
     /*coisas do titulo da page*/
     font-size: 35px;
     line-height: 10px;
@@ -208,6 +205,8 @@ button {
 }
 .container p {
     text-align: justify;
+    font-size: 17px;
+    text-indent: 40px;
 }
 
 .explicar {
@@ -227,7 +226,8 @@ button {
     height: 350px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+      
 
 }
 .titulo2 {
@@ -267,7 +267,58 @@ h2{
     font-style: italic;
 }
 
-
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #faebd7;
+    height: 200px;
+  }
+  
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1260px;
+    height: 150px;
+    padding: 0;
+   
+  }
+  .container-footer:not(:first-child) {
+    padding-right: 30px;
+  }
+  
+  .footer-col {
+    margin-top: 200px;
+  } 
+  .logos{
+    margin-top: 60px;
+  }
+  
+  .footer-col h4 {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 20px;
+    font-style: bold;
+  }
+  h5{
+   font-size: 15px;
+  
+  }
+  
+  .footer-col ul li {
+    margin: 10px 0;
+  }
+  
+  div#redes img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .redeso {
+    display: flex;
+    align-content: flex-end;
+  }
 
 
 
