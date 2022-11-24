@@ -94,7 +94,7 @@
                                 <li> <a href="https://www.instagram.com/melo.doramatica/"> <img src="img/instagram.png"
                                             alt="logoinsta"></a> </li>
                                 <li> <a href="https://twitter.com/melodoramaticaa"> <img src="img/twitter.png"
-                                            alt="logoinsta"></a> </li>
+                                            alt="logott"></a> </li>
 
                             </div>
                         </ul>
@@ -118,9 +118,7 @@
 
 
 
-
-
-        // seguindo método da tela de cadastro fé em deus que ele é justo hey irmão nunca se esqueça
+        // seguindo método da tela de cadastro 
 
         if (categoria1Var == "" || categoria2Var == "" || categoria3Var == "") {
             cardErro.style.display = "block"
@@ -134,7 +132,7 @@
         }
 
         // Enviando o valor da nova input
-        fetch("/categoria/votar", {
+        fetch("/usuarios/votar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -153,7 +151,7 @@
             if (resposta.ok) {
                 // cardErro.style.display = "block";
 
-                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                // mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
                     window.location = "enquete.html";
@@ -172,9 +170,9 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    
 
 </script>
 

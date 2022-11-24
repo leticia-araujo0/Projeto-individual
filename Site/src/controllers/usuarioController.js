@@ -98,9 +98,36 @@ function cadastrar(req, res) {
 
 
 function votar(req, res){
+    var categoria1 = req.body.categoria1Server;
+    var categoria2 = req.body.categoria2Server;
+    var categoria3 = req.body.categoria3Server;
 
+    if (categoria1 == undefined) {
+        res.status(400).send("Escolha uma opção!");
+    } else if (categoria2 == undefined) {
+        res.status(400).send("Escolha uma opção!");
+    } else if (categoria3 == undefined) {
+        res.status(400).send("Escolha uma opção!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.votar(categoria1, categoria2, categoria3)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
 }
-
 
 
 
@@ -108,5 +135,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    votar
 }
