@@ -35,37 +35,37 @@
 
                     <h1>Categorias</h1>
 
-                    <select class="votacao" id="sel_votacao">
+                    <select class="votacao" id="sel_votacao1">
                         <option value="">Melhor Ator</option>
 
-                        <option value="">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
-                        <option value="">Ahn HyoSeop (Business Proposal)</option>
-                        <option value="">Lee MinHo (Pachinko)</option>
-                        <option value="">RoWoon (Tomorrow)</option>
+                        <option value="njh">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
+                        <option value="ahs">Ahn HyoSeop (Business Proposal)</option>
+                        <option value="lmh">Lee MinHo (Pachinko)</option>
+                        <option value="rw">RoWoon (Tomorrow)</option>
 
                     </select>
-                    <select class="votacao" id="sel_votacao">
+                    <select class="votacao" id="sel_votacao2">
                         <option value="">Melhor Atriz</option>
 
-                        <option value="">Park EunBin (Uma Advogada Extraordinária)</option>
-                        <option value="">Kim SeJeong (Business Proposal)</option>
-                        <option value="">Youn YuhJung (Pachinko)</option>
-                        <option value="">Jung So-min (Alquimia das Almas)</option>
+                        <option value="peb">Park EunBin (Uma Advogada Extraordinária)</option>
+                        <option value="ksj">Kim SeJeong (Business Proposal)</option>
+                        <option value="yyj">Youn YuhJung (Pachinko)</option>
+                        <option value="jsm">Jung SoMin (Alquimia das Almas)</option>
 
                     </select>
 
-                    <select class="votacao" id="sel_votacao">
+                    <select class="votacao" id="sel_votacao3">
                         <option value="">Melhor Dorama</option>
 
-                        <option value="">Vinte Cinco, Vinte Um</option>
-                        <option value="">Business Proposal</option>
-                        <option value="">Pachinko</option>
-                        <option value="">Tomorrow</option>
-                        <option value="">Uma Advogada Extraordinária</option>
+                        <option value="vcvu">Vinte Cinco, Vinte Um</option>
+                        <option value="bp">Business Proposal</option>
+                        <option value="pck">Pachinko</option>
+                        <option value="tmr">Tomorrow</option>
+                        <option value="adv">Uma Advogada Extraordinária</option>
 
                     </select>
 
-                    <button class="btn" onclick="entrar()">Votar!</button>
+                    <button class="btn" onclick="votar()">Votar!</button>
 
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <!--end footer col-->
                     <!-- footer col-->
                     <div class="footer-col">
-                        <h4>Todos os direitos reservados - MeloDoramática &copy; 2022</h4>
+                        <h4>MeloDoramática &copy; 2022 - Desenvolvido por Letícia Santos &hearts;</h4>
                     </div>
                     <!--end footer col-->
                     <!-- footer col-->
@@ -104,13 +104,146 @@
 
         </div>
     </div>
-    </body>
-    </html>
+</body>
 
-    <script>
+</html>
 
-        function enquete() {
+<script>
+
+    function votar() {
+        // fazer var das categoria 
+        var categoria1Var = sel_votacao1.value;
+        var categoria2Var = sel_votacao2.value;
+        var categoria3Var = sel_votacao3.value;
+
+
+
+
+
+        // seguindo método da tela de cadastro fé em deus que ele é justo hey irmão nunca se esqueça
+
+        if (categoria1Var == "" || categoria2Var == "" || categoria3Var == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Selecione uma opção em todas as categorias!";
+
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
         }
 
-    </script>
+        // Enviando o valor da nova input
+        fetch("/categoria/votar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                categoria1Server: categoria1Var,
+                categoria2Server: categoria2Var,
+                categoria3Server: categoria3Var
+            })
+        }).then(function (resposta) {
 
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "enquete.html";
+                }, "2000")
+
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar votar!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
+
+
+<!-- <script> -->
+<!-- var concorrentes = {
+            njh:0,
+             ahs:0,
+             lmh:0,
+             lmh:0,
+             rw:0,
+             peb:0,
+             ksj:0,
+             yyj:0,
+             jsm:0,
+             vcvu:0,
+             bp:0,
+             pchk:0,
+             tmr:0,
+             adve:0
+         }
+
+         function votar() {
+             var votacao1 = (sel_votacao1.value)
+             var votacao2 = (sel_votacao2.value)
+             var votacao3 = (sel_votacao3.value)
+
+             if (votacao1 == "njh"){
+                 concorrentes.njh.push(concorrentes.njh+1)
+             }
+
+             if (votacao1 == "ahs"){
+                 concorrentes.ahs.push(concorrentes.ahs+1)
+             }
+             if (votacao1 == "lmh"){
+                 concorrentes.lmh.push(concorrentes.lmh+1)
+             }
+
+             if (votacao1 == "rw"){
+                 concorrentes.rw.push(concorrentes.rw+1)
+             }
+             if (votacao2 == "peb"){
+                 concorrentes.rw.push(concorrentes.peb+1)
+             }
+             if (votacao2 == "ksj"){
+                 concorrentes.ksj.push(concorrentes.ksj+1)
+             }
+             if (votacao2 == "yyj"){
+                 concorrentes.yyj.push(concorrentes.yyj+1)
+             }
+             if (votacao2 == "jsm"){
+                 concorrentes.jsm.push(concorrentes.jsm+1)
+             }
+
+             if (votacao3 == "vcvu"){
+                 concorrentes.vcvu.push(concorrentes.vcvu+1)
+             }
+             if (votacao3 == "bp"){
+                 concorrentes.bp.push(concorrentes.bp+1)
+             }
+             if (votacao3 == "pchk"){
+                 concorrentes.pchk.push(concorrentes.pchk+1)
+             }
+             if (votacao3 == "tmr"){
+                 concorrentes.tmr.push(concorrentes.tmr+1)
+             }
+             if (votacao3 == "adve"){
+                 concorrentes.adve.push(concorrentes.adve+1)
+                
+             }} -->
+
+<!-- </script> -->

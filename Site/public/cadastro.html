@@ -39,13 +39,13 @@
             <h2>Junte-se a nós!</h2>
             <div class="formulario">
 
-                <span class="tipo_campo">Nome de usuário:</span>
+                <span class="tipo_campo"><h4>Nome de usuário:</h4></span>
                 <input id="nome_input" type="text" placeholder="Nome de usuário">
 
-                <span class="tipo_campo">E-mail:</span>
+                <span class="tipo_campo"><h4>E-mail:</h4></span>
                 <input id="email_input" type="text" placeholder="seumail@email.com">
 
-                <span class="tipo_campo">Senha:</span>
+                <span class="tipo_campo"><h4>Senha:</h4></span>
                 <input id="senha_input" type="password" placeholder="******">
 
                 <button class="btn" onclick="cadastrar()">Cadastrar</button>
@@ -76,7 +76,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha todos os campos!";
 
             // finalizarAguardar();
             return false;
