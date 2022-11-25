@@ -8,6 +8,8 @@
     <link href="enquete.css" rel="stylesheet">
     <title> MeloDoramática</title>
 
+    <script src="./js/funcoes.js"></script>
+
     <link rel="icon" href="./img/icone2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,34 +29,23 @@
         </ul>
     </header>
 
+
+
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+
     <div class="banner">
         <div class="container">
             <div class="card">
-                <h1>⭐ Premiação MeloDoramática KDramas 2022 🏆</h1>
+                <h1>⭐Premiação MeloDoramática KDramas 2022 🏆</h1>
                 <div class="formulario">
 
                     <h1>Categorias</h1>
 
                     <select class="votacao" id="sel_votacao1">
-                        <option value="">Melhor Ator</option>
-
-                        <option value="njh">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
-                        <option value="ahs">Ahn HyoSeop (Business Proposal)</option>
-                        <option value="lmh">Lee MinHo (Pachinko)</option>
-                        <option value="rw">RoWoon (Tomorrow)</option>
-
-                    </select>
-                    <select class="votacao" id="sel_votacao2">
-                        <option value="">Melhor Atriz</option>
-
-                        <option value="peb">Park EunBin (Uma Advogada Extraordinária)</option>
-                        <option value="ksj">Kim SeJeong (Business Proposal)</option>
-                        <option value="yyj">Youn YuhJung (Pachinko)</option>
-                        <option value="jsm">Jung SoMin (Alquimia das Almas)</option>
-
-                    </select>
-
-                    <select class="votacao" id="sel_votacao3">
                         <option value="">Melhor Dorama</option>
 
                         <option value="vcvu">Vinte Cinco, Vinte Um</option>
@@ -65,8 +56,32 @@
 
                     </select>
 
+                    <select class="votacao" id="sel_votacao2">
+                        <option value="">Melhor Ator</option>
+
+                        <option value="njh">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
+                        <option value="ahs">Ahn HyoSeop (Business Proposal)</option>
+                        <option value="lmh">Lee MinHo (Pachinko)</option>
+                        <option value="rw">RoWoon (Tomorrow)</option>
+
+                    </select>
+                    <select class="votacao" id="sel_votacao3">
+                        <option value="">Melhor Atriz</option>
+
+                        <option value="peb">Park EunBin (Uma Advogada Extraordinária)</option>
+                        <option value="ksj">Kim SeJeong (Business Proposal)</option>
+                        <option value="yyj">Youn YuhJung (Pachinko)</option>
+                        <option value="jsm">Jung SoMin (Alquimia das Almas)</option>
+
+                    </select>
+
+                    
+
                     <button class="btn" onclick="votar()">Votar!</button>
 
+                    <div class="graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -96,6 +111,7 @@
                                 <li> <a href="https://twitter.com/melodoramaticaa"> <img src="img/twitter.png"
                                             alt="logott"></a> </li>
 
+
                             </div>
                         </ul>
                     </div>
@@ -116,9 +132,9 @@
         var categoria2Var = sel_votacao2.value;
         var categoria3Var = sel_votacao3.value;
 
+        var idusuario = sessionStorage.ID_USUARIO;
 
-
-        // seguindo método da tela de cadastro 
+        // seguindvar o método da tela de cadastro 
 
         if (categoria1Var == "" || categoria2Var == "" || categoria3Var == "") {
             cardErro.style.display = "block"
@@ -132,7 +148,7 @@
         }
 
         // Enviando o valor da nova input
-        fetch("/usuarios/votar", {
+        fetch(`/usuarios/votar/${idusuario}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -150,14 +166,14 @@
 
             if (resposta.ok) {
                 // cardErro.style.display = "block";
-
+                console.log('Cheguei aqui')
                 // mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Login...";
 
-                setTimeout(() => {
-                    window.location = "enquete.html";
-                }, "2000")
+                // setTimeout(() => {
+                //     window.location = "enquete.html";
+                // }, "2000")
 
-                limparFormulario();
+                // limparFormulario();
                 // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar votar!");
@@ -172,76 +188,100 @@
 
     // function sumirMensagem() {
     //     cardErro.style.display = "none"
-    
+
+
+
+    // gráficos das enquetes
+
+    function obterDadosGrafico(idCategoria) {
+        alterarTitulo(idCategoria)
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`/medidas/ultimas/${idCategoria}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idCategoria);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idCategoria) {
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Umidade',
+                data: [],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            },
+            {
+                label: 'Temperatura',
+                data: [],
+                fill: false,
+                borderColor: 'rgb(199, 52, 52)',
+                tension: 0.1
+            }]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.momento_grafico);
+            dados.datasets[0].data.push(registro.umidade);
+            dados.datasets[1].data.push(registro.temperatura);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'line',
+            data: dados,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+        setTimeout(() => atualizarGrafico(idCategoria, dados, myChart), 2000);
+    }
+
+
+
+
 
 </script>
-
-
-<!-- <script> -->
-<!-- var concorrentes = {
-            njh:0,
-             ahs:0,
-             lmh:0,
-             lmh:0,
-             rw:0,
-             peb:0,
-             ksj:0,
-             yyj:0,
-             jsm:0,
-             vcvu:0,
-             bp:0,
-             pchk:0,
-             tmr:0,
-             adve:0
-         }
-
-         function votar() {
-             var votacao1 = (sel_votacao1.value)
-             var votacao2 = (sel_votacao2.value)
-             var votacao3 = (sel_votacao3.value)
-
-             if (votacao1 == "njh"){
-                 concorrentes.njh.push(concorrentes.njh+1)
-             }
-
-             if (votacao1 == "ahs"){
-                 concorrentes.ahs.push(concorrentes.ahs+1)
-             }
-             if (votacao1 == "lmh"){
-                 concorrentes.lmh.push(concorrentes.lmh+1)
-             }
-
-             if (votacao1 == "rw"){
-                 concorrentes.rw.push(concorrentes.rw+1)
-             }
-             if (votacao2 == "peb"){
-                 concorrentes.rw.push(concorrentes.peb+1)
-             }
-             if (votacao2 == "ksj"){
-                 concorrentes.ksj.push(concorrentes.ksj+1)
-             }
-             if (votacao2 == "yyj"){
-                 concorrentes.yyj.push(concorrentes.yyj+1)
-             }
-             if (votacao2 == "jsm"){
-                 concorrentes.jsm.push(concorrentes.jsm+1)
-             }
-
-             if (votacao3 == "vcvu"){
-                 concorrentes.vcvu.push(concorrentes.vcvu+1)
-             }
-             if (votacao3 == "bp"){
-                 concorrentes.bp.push(concorrentes.bp+1)
-             }
-             if (votacao3 == "pchk"){
-                 concorrentes.pchk.push(concorrentes.pchk+1)
-             }
-             if (votacao3 == "tmr"){
-                 concorrentes.tmr.push(concorrentes.tmr+1)
-             }
-             if (votacao3 == "adve"){
-                 concorrentes.adve.push(concorrentes.adve+1)
-                
-             }} -->
-
-<!-- </script> -->

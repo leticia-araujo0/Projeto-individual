@@ -101,7 +101,10 @@
 
         <div class="card">
 
-            <img class="foto" src="img/jp.png" alt="japão">
+            <div id="japs">
+             <a href="./comidas.html"><img class="foto" src="img/jp.png" alt="japão"></a>
+            </div>
+            
 
             <h2>Japão</h2>
             <h3>Dorama /J-drama (Japanese Drama)</h3>
@@ -203,14 +206,16 @@
 
 <script>
     var divAlerta = document.getElementById('alertafake').style
-
+   
     function fake() {
         divAlerta.display = "none   "
     }
     function curiosidade() {
         divAlerta.display = "flex"
 
-        var sorteio = parseInt(1 + Math.random() * 15)
+        var sorteio = parseInt(Math.random() * 15)
+
+        // fazer vetor com as opssaummm
        
         if (sorteio == 1) {
             alertafakee.innerHTML = `O ator japonês Miura Haruma e a atriz

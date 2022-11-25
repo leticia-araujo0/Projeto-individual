@@ -101,6 +101,7 @@ function votar(req, res){
     var categoria1 = req.body.categoria1Server;
     var categoria2 = req.body.categoria2Server;
     var categoria3 = req.body.categoria3Server;
+    var idusuario = req.params. idusuario;
 
     if (categoria1 == undefined) {
         res.status(400).send("Escolha uma opção!");
@@ -111,7 +112,7 @@ function votar(req, res){
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.votar(categoria1, categoria2, categoria3)
+        usuarioModel.votar(categoria1, categoria2, categoria3, idusuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
