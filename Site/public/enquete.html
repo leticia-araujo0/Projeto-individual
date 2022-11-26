@@ -141,9 +141,9 @@
                 console.log('Cheguei aqui')
                 // mensagem_erro.innerHTML = "Voto realizado com sucesso! Redirecionando para tela de Login...";
 
-                // setTimeout(() => {
-                //     window.location = "enquete.html";
-                // }, "2000")
+                setTimeout(() => {
+                    window.location = "enquete.html";
+                }, "2000")
 
                 // limparFormulario();
                 // finalizarAguardar();
@@ -163,8 +163,21 @@
 
 
 
+    // adicionei hoje sábado essa parte
+    
+    let proximaAtualizacao;
+    
+    window.onload = obterDadosGrafico(1);
+    
+    verificar_autenticacao();
+    
+    function alterarTitulo(idCategoria) {
+        var tituloCategoria = document.getElementById("tituloCategoria")
+        tituloCategoria.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>categoria " + idCategoria + "</span>"
+    }
+    
     // gráficos das enquetes
-
+    
     function obterDadosGrafico(idCategoria) {
         alterarTitulo(idCategoria)
 

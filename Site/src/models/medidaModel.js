@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idCategoria, limite_linhas) {
+function buscarUltimasMedidas(idCategoria) {
 
     instrucaoSql = ''
 

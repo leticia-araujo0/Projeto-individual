@@ -47,9 +47,9 @@
   }
   
   .banner .container .card {
-      /* background-color: #e6bc18; */
-      height: 350px;
-      width: 450px;
+      background-color: #e6bc18;
+      /* height: 350px;
+      width: 450px; */
       display: flex;
       flex-direction: column;
       color: black;
@@ -104,11 +104,72 @@
         border: 0;
         border-radius: 5px;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 17px;
         padding: 10px 15px;
         color: #e6bc18;
         background-color: #FAEBD7;
-        width: 120px;
+        width: 110px;
+        height: 50px;
         align-self: center;
         margin-top: 5px;
       }
+      .btn:hover {
+        background-color: black;
+        color: #e6bc18;
+      }
+
+
+
+      footer {
+        margin: 0;
+        padding: 0;
+        background-color: #faebd7;
+        height: 200px;
+      }
+      
+      .container-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 1260px;
+        height: 150px;
+        padding: 0;
+       
+      }
+      .container-footer:not(:first-child) {
+        padding-right: 30px;
+      }
+      
+      .footer-col {
+        margin-top: 200px;
+      } 
+      .logos{
+        margin-top: 60px;
+      }
+      
+      .footer-col h4 {
+        font-size: 15px;
+        color: black;
+        margin-bottom: 20px;
+        font-style: bold;
+      }
+      h5{
+       font-size: 15px;
+      
+      }
+      
+      .footer-col ul li {
+        margin: 10px 0;
+      }
+      
+      div#redes img {
+        width: 28px;
+        height: 28px;
+      }
+      
+      .redeso {
+        display: flex;
+        align-content: flex-end;
+      }
+    
