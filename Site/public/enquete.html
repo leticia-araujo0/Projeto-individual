@@ -40,44 +40,19 @@
     <div class="banner">
         <div class="container">
             <div class="card">
-                <h1>⭐Premiação MeloDoramática KDramas 2022 🏆</h1>
                 <div class="formulario">
-
-                    <h1>Categorias</h1>
-
+                    <br> <br>
+                    <h1>⭐Premiação MeloDoramática KDramas 2022 🏆</h1>
+                    <br>
+                    <h1>Vote no melhor dorama!</h1>
+                    <br>
                     <select class="votacao" id="sel_votacao1">
-                        <option value="">Melhor Dorama</option>
-
                         <option value="vcvu">Vinte Cinco, Vinte Um</option>
                         <option value="bp">Business Proposal</option>
                         <option value="pck">Pachinko</option>
                         <option value="tmr">Tomorrow</option>
                         <option value="adv">Uma Advogada Extraordinária</option>
-
-                    </select>
-
-                    <select class="votacao" id="sel_votacao2">
-                        <option value="">Melhor Ator</option>
-
-                        <option value="njh">Nam JooHyuk (Vinte Cinco, Vinte Um)</option>
-                        <option value="ahs">Ahn HyoSeop (Business Proposal)</option>
-                        <option value="lmh">Lee MinHo (Pachinko)</option>
-                        <option value="rw">RoWoon (Tomorrow)</option>
-
-                    </select>
-                    <select class="votacao" id="sel_votacao3">
-                        <option value="">Melhor Atriz</option>
-
-                        <option value="peb">Park EunBin (Uma Advogada Extraordinária)</option>
-                        <option value="ksj">Kim SeJeong (Business Proposal)</option>
-                        <option value="yyj">Youn YuhJung (Pachinko)</option>
-                        <option value="jsm">Jung SoMin (Alquimia das Almas)</option>
-
-                    </select>
-
-                    
-
-                    <button class="btn" onclick="votar()">Votar!</button>
+                    </select> <button class="btn" onclick="votar()">Votar!</button>
 
                     <div class="graph">
                         <canvas id="myChart"></canvas>
@@ -98,7 +73,7 @@
                     <!--end footer col-->
                     <!-- footer col-->
                     <div class="footer-col">
-                        <h4>MeloDoramática &copy; 2022 - Desenvolvido por Letícia Santos &hearts;</h4>
+                        <h4>MeloDoramática &copy; 2022 &hearts; Desenvolvido por Letícia Santos &hearts;</h4>
                     </div>
                     <!--end footer col-->
                     <!-- footer col-->
@@ -129,16 +104,14 @@
     function votar() {
         // fazer var das categoria 
         var categoria1Var = sel_votacao1.value;
-        var categoria2Var = sel_votacao2.value;
-        var categoria3Var = sel_votacao3.value;
 
         var idusuario = sessionStorage.ID_USUARIO;
 
         // seguindvar o método da tela de cadastro 
 
-        if (categoria1Var == "" || categoria2Var == "" || categoria3Var == "") {
+        if (categoria1Var == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Selecione uma opção em todas as categorias!";
+            mensagem_erro.innerHTML = "Selecione uma opção!";
 
             // finalizarAguardar();
             return false;
@@ -156,9 +129,8 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                categoria1Server: categoria1Var,
-                categoria2Server: categoria2Var,
-                categoria3Server: categoria3Var
+                categoria1Server: categoria1Var
+        
             })
         }).then(function (resposta) {
 

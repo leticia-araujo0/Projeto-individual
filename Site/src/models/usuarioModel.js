@@ -30,13 +30,13 @@ function cadastrar(nome, email, senha) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-function votar(categoria1, categoria2, categoria3, idusuario) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", categoria1, categoria2, categoria3, idusuario);
+function votar(categoria1, idusuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", categoria1, idusuario);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO Categoria (MelhorDorama, MelhorAtriz, MelhorAtor, fkUsuario) VALUES ('${categoria1}', '${categoria2}', '${categoria3}', '${idusuario}');
+        INSERT INTO Categoria (MelhorDorama, fkUsuario) VALUES ('${categoria1}', '${idusuario}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

@@ -99,20 +99,14 @@ function cadastrar(req, res) {
 
 function votar(req, res){
     var categoria1 = req.body.categoria1Server;
-    var categoria2 = req.body.categoria2Server;
-    var categoria3 = req.body.categoria3Server;
     var idusuario = req.params. idusuario;
 
     if (categoria1 == undefined) {
         res.status(400).send("Escolha uma opção!");
-    } else if (categoria2 == undefined) {
-        res.status(400).send("Escolha uma opção!");
-    } else if (categoria3 == undefined) {
-        res.status(400).send("Escolha uma opção!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.votar(categoria1, categoria2, categoria3, idusuario)
+        usuarioModel.votar(categoria1, idusuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
