@@ -36,7 +36,7 @@ function votar(categoria1, idusuario) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO Categoria (MelhorDorama, fkUsuario) VALUES ('${categoria1}', '${idusuario}');
+    INSERT INTO Categoria (MelhorDorama, fkUsuario) VALUES  ('${categoria1}', '${idusuario}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

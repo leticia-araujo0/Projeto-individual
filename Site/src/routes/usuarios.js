@@ -24,8 +24,4 @@ router.post("/votar/:idusuario", function (req, res) {
     usuarioController.votar(req, res);
 });
 
-router.post("/votar/:categoria1", function (req, res) {
-    usuarioController.votar(req, res);
-});
-
 module.exports = router;

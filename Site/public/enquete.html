@@ -8,12 +8,18 @@
     <link href="enquete.css" rel="stylesheet">
     <title> MeloDoramática</title>
 
-    <script src="./js/funcoes.js"></script>
+    <script src="../js/funcoes.js"></script>
 
     <link rel="icon" href="./img/icone2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -47,6 +53,7 @@
                     <h1>Vote no melhor dorama!</h1>
                     <br>
                     <select class="votacao" id="sel_votacao1">
+                        <option value="">Indicados</option>
                         <option value="vcvu">Vinte Cinco, Vinte Um</option>
                         <option value="bp">Business Proposal</option>
                         <option value="pck">Pachinko</option>
@@ -54,8 +61,15 @@
                         <option value="adv">Uma Advogada Extraordinária</option>
                     </select> <button class="btn" onclick="votar()">Votar!</button>
 
+
+                    
+                   
                     <div class="graph">
                         <canvas id="myChart"></canvas>
+                    </div>
+
+                    <div class="avisoCaptura">
+                        <p id="avisoCaptura" style="color: white"></p>
                     </div>
                 </div>
             </div>
@@ -130,7 +144,7 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 categoria1Server: categoria1Var
-        
+
             })
         }).then(function (resposta) {
 
@@ -164,34 +178,30 @@
 
 
     // adicionei hoje sábado essa parte
+
+    // let proximaAtualizacao;
+
+    window.onload = obterDadosGrafico();
+
     
-    let proximaAtualizacao;
-    
-    window.onload = obterDadosGrafico(1);
-    
-    verificar_autenticacao();
-    
-    function alterarTitulo(idCategoria) {
-        var tituloCategoria = document.getElementById("tituloCategoria")
-        tituloCategoria.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>categoria " + idCategoria + "</span>"
-    }
-    
+    // function alterarTitulo(idCategoria) {
+    //     var tituloCategoria = document.getElementById("tituloCategoria")
+    //     tituloCategoria.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>categoria " + idCategoria + "</span>"
+    // }
+
     // gráficos das enquetes
-    
-    function obterDadosGrafico(idCategoria) {
-        alterarTitulo(idCategoria)
 
-        if (proximaAtualizacao != undefined) {
-            clearTimeout(proximaAtualizacao);
-        }
-
-        fetch(`/medidas/ultimas/${idCategoria}`, { cache: 'no-store' }).then(function (response) {
+    function obterDadosGrafico() {
+        console.log(`Obter dados gráficos`)
+        
+        fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
+
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idCategoria);
+                    plotarGrafico(resposta);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -205,7 +215,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idCategoria) {
+    function plotarGrafico(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -215,31 +225,24 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Umidade',
+                label: 'Votos',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
+                borderColor: 'rgb(75, 150, 88)',
+                // tension: 0.1
             },
-            {
-                label: 'Temperatura',
-                data: [],
-                fill: false,
-                borderColor: 'rgb(199, 52, 52)',
-                tension: 0.1
-            }]
+           ]
         };
 
-        console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        
         console.log(resposta)
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.umidade);
-            dados.datasets[1].data.push(registro.temperatura);
+            labels.push(registro.MelhorDorama);
+            dados.datasets[0].data.push(registro.fkVotos);
+
         }
 
         console.log('----------------------------------------------')
@@ -252,7 +255,7 @@
 
         // Criando estrutura para plotar gráfico - config
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dados,
         };
 
@@ -262,11 +265,7 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico(idCategoria, dados, myChart), 2000);
     }
-
-
-
 
 
 </script>

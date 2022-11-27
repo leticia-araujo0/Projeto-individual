@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idCategoria) {
+function buscarUltimasMedidas() {
 
     instrucaoSql = ''
 
@@ -14,8 +14,7 @@ function buscarUltimasMedidas(idCategoria) {
                     where fk_aquario = ${idAquario}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select MelhorDorama ,count(MelhorDorama) as idusuario from categoria
-         ${idCategoria}`;
+        instrucaoSql = `select MelhorDorama ,count(MelhorDorama) as fkVotos from categoria group by MelhorDorama`;
                 
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -26,7 +25,7 @@ function buscarUltimasMedidas(idCategoria) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idCategoria) {
+function buscarMedidasEmTempoReal() {
 
     instrucaoSql = ''
 
