@@ -23,6 +23,7 @@
             <li> <a href="./index.html">Início</a></li>
             <li> <a href="./sig.html">O que são doramas?</a></li>
             <li> <a href="./login.html"> Login</a></li>
+            <li> <a href="./dicio.html"> Dicionário</a></li>
             <li> <a href="./cadastro.html">Seja membro</a></li>
         </ul>
     </header>
@@ -37,52 +38,12 @@
                     <input id="in_dorama"> <br>
 
                     <button class="btn" onclick="btn_salvar()">Dropei!</button>
-                    <button class="btn" onclick="btn_mostrar()">Oxe, cadê?</button>
+                    <button class="btn" onclick="btn_mostrar()">Cadê?</button>
                     <div id=div_resultado></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="rodape">
-        <div class="container-footer">
-
-            <div class="logofooter">
-
-                <div id="logo">
-                    <a href="./index.html"><img src="img/logo8.png"></a>
-                </div>
-
-            </div>
-            <!--end footer col-->
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>MeloDoramática &copy; 2022 &hearts; Desenvolvido por Letícia Santos &hearts;</h4>
-            </div>
-            <!--end footer col-->
-            <!-- footer col-->
-            <div class="logos">
-                <h5>Segue a gente!</h5>
-                <ul>
-
-                    <div id="redes" class="redeso">
-                        <li> <a href="https://www.instagram.com/melo.doramatica/"> <img src="img/instagram.png"
-                                    alt="logoinsta"></a> </li>
-                        <li> <a href="https://twitter.com/melodoramaticaa"> <img src="img/twitter.png"
-                                    alt="logoinsta"></a> </li>
-
-                    </div>
-
-                </ul>
-            </div>
-            <!--end footer col-->
-            <!-- footer col-->
-
-
-
-            <!--end footer col-->
-        </div>
-    </footer>
 
 
     <script>
@@ -117,12 +78,12 @@
 
             for (var indice = 0; indice < drop.length; indice++) {
 
-            var atual = drop[indice]
+                var atual = drop[indice]
 
-            div_resultado.innerHTML += ` ${indice + 1} - ${atual} <br>`
+                div_resultado.innerHTML += ` ${indice + 1} - ${atual} <br>`
+            }
+
         }
 
-            }
-        
 
     </script>

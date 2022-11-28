@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script&family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +8,14 @@
 }
 
 body {
-    /*cor de fundo e tudo do começo*/
-  background-image: linear-gradient(60deg, #e6bc18, #faebd7);
-  color: black;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  width: 100%;
-  /* margin: auto; */
-  /* padding: 65px; */
-
-
+    
+    background-image: linear-gradient(60deg, #e6bc18, #faebd7);
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    width: 100%;
 }
+
 div#logo img {
     margin-top: 10%;
     width: 200px;
@@ -31,11 +29,9 @@ header {
     height: 125px;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom: 15px solid #FAEBD7; */
 }
 
 li {
-    /*ordem das coisa da header que vai virar link */
     display: inline-block;
     list-style: none;
     margin: 20px;
@@ -44,19 +40,16 @@ li {
 }
 
 a {
-    /*cor das coisa da header que vai virar link (menos a logo)*/
     color: #e6bc18;
     text-decoration: none;
 }
 
 li :hover {
-    /*cor e bagui das coisa da header que mudar de cor qnd passa o mouse*/
     color: black;
     transition: 0.3s all;
 }
 
 .a_curiosidade {
-    /*css das coisas do botão que é pra virar um math.random*/
     border: 2px solid black;
     padding: 3px;
     border-radius: 20px;
@@ -66,12 +59,12 @@ li :hover {
 }
 
 .a_curiosidade:hover {
-    /*hover do bagui acima*/
     background-color: #e6bc18;
     color: black;
     cursor: pointer;
 
 }
+
 .a_enquete {
     background-color: #faebd7;
     color: black;
@@ -79,21 +72,22 @@ li :hover {
     border-radius: 8px;
     padding: 10px;
     width: 200px;
-    height: 50px; 
+    height: 50px;
     text-align: center;
-    font-weight: bolder; 
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
 }
+
 .a_enquete:hover {
-    /*hover do bagui acima*/
     background-color: black;
     color: #e6bc18;
     cursor: pointer;
 
 }
+
 main {
     display: flex;
     position: relative;
@@ -102,22 +96,17 @@ main {
     margin-top: 40px;
     margin-left: 3%;
 }
+
 nav {
     width: 90%;
     height: 50px;
     display: flex;
     margin: 20px;
-    /* border-bottom-style:dashed; */
-    
-    /* border-bottom: 1.5px solid pink; */
-    /* background-color: #1231427e; */
-    
 }
 
 
 
-
-
+/* início do conteúdo da página inicial */
 .titulo {
     padding: 5px;
     margin-top: 50px;
@@ -125,7 +114,7 @@ nav {
 }
 
 #texto h5 {
-    /*coisas do titulo da page*/
+    /*titulo da page*/
     font-size: 35px;
     line-height: 10px;
     height: 50px;
@@ -135,7 +124,7 @@ nav {
 
 button {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     width: 200px;
     height: 40px;
     border-radius: 20px;
@@ -155,14 +144,13 @@ button {
     justify-content: flex-start;
 }
 
+
 /* da caixa de alerta das curiosidades */
-
-
 .alertafake {
     background-color: white;
     display: none;
     padding: 10px;
-    /* display: none;  descomitar isso e comitar pra ver como ta ficando o alertx  fake */
+    /* display: none;  descomitar isso e comitar pra ver como ta ficando o alerta  fake */
     margin-left: 380px;
     align-items: center;
     position: absolute;
@@ -180,13 +168,8 @@ button {
 
 .alertafake .fechar {
     background-color: #FF6347;
-    position:sticky ;
+    position: sticky;
 }
-
-
-
-
-
 
 /* o que são doramas */
 
@@ -195,48 +178,46 @@ button {
     display: flex;
     flex-direction: row;
 }
-
 .container {
     box-sizing: border-box;
     width: 80%;
     height: 115vh;
     margin: 50px;
-    
+
 }
 .container p {
     text-align: justify;
     font-size: 17px;
     text-indent: 40px;
 }
-
 .explicar {
     width: 500px;
-    height: 65vh;
+    height: 55vh;
     margin: 10px;
     left: 5%;
-    top: 50%;
+    top: 60%;
     display: flex;
-    float: left; 
+    float: left;
     /* talvez tirar float */
-    
-}
 
+}
 .explicar img {
-    width: 500px;
-    height: 350px;
+    width: 480px;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
-      
 
 }
+
 .titulo2 {
     margin-top: 70px;
     font-size: 12px;
     display: flex;
     justify-content: center;
-    
+
 }
+
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -251,18 +232,20 @@ button {
     align-items: center;
     flex-direction: column;
     padding: 10px 15px;
-    box-shadow: 6px 6px 10px rgba(#e6bc16, #faebd7, black,0.377);
+    box-shadow: 6px 6px 10px rgba(#e6bc16, #faebd7, black, 0.377);
     border-radius: 10px;
-    background-color: rgb(rgb(208, 142, 142), rgb(194, 18, 76), rgba(56, 169, 195, 0.556))
 }
-.card .foto{
+
+.card .foto {
     width: 450px;
 
 }
+
 .card p {
     text-align: center;
 }
-h2{
+
+h2 {
     color: #e44225;
     font-style: italic;
 }
@@ -272,9 +255,9 @@ footer {
     padding: 0;
     background-color: #faebd7;
     height: 200px;
-  }
-  
-  .container-footer {
+}
+
+.container-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -282,46 +265,42 @@ footer {
     width: 1260px;
     height: 150px;
     padding: 0;
-   
-  }
-  .container-footer:not(:first-child) {
+}
+
+.container-footer:not(:first-child) {
     padding-right: 30px;
-  }
-  
-  .footer-col {
+}
+
+.footer-col {
     margin-top: 200px;
-  } 
-  .logos{
+}
+
+.logos {
     margin-top: 60px;
-  }
-  
-  .footer-col h4 {
+}
+
+.footer-col h4 {
     font-size: 15px;
     color: black;
     margin-bottom: 20px;
     font-style: bold;
-  }
-  h5{
-   font-size: 15px;
-  
-  }
-  
-  .footer-col ul li {
+}
+
+h5 {
+    font-size: 15px;
+
+}
+
+.footer-col ul li {
     margin: 10px 0;
-  }
-  
-  div#redes img {
+}
+
+div#redes img {
     width: 28px;
     height: 28px;
-  }
-  
-  .redeso {
+}
+
+.redeso {
     display: flex;
     align-content: flex-end;
-  }
-
-
-
-
-
-
+}

@@ -25,6 +25,7 @@
             <li> <a href="./index.html">Início</a></li>
             <li> <a href="./index.html">O que são doramas?</a></li>
             <li> <a href="./login.html"> Login</a></li>
+            <li> <a href="./dicio.html"> Dicionário</a></li>
             <li> <a href="">Seja membro</a></li>
         </ul>
     </header>
@@ -39,13 +40,19 @@
             <h2>Junte-se a nós!</h2>
             <div class="formulario">
 
-                <span class="tipo_campo"><h4>Nome de usuário:</h4></span>
+                <span class="tipo_campo">
+                    <h4>Nome de usuário:</h4>
+                </span>
                 <input id="nome_input" type="text" placeholder="Nome de usuário">
 
-                <span class="tipo_campo"><h4>E-mail:</h4></span>
+                <span class="tipo_campo">
+                    <h4>E-mail:</h4>
+                </span>
                 <input id="email_input" type="text" placeholder="seumail@email.com">
 
-                <span class="tipo_campo"><h4>Senha:</h4></span>
+                <span class="tipo_campo">
+                    <h4>Senha:</h4>
+                </span>
                 <input id="senha_input" type="password" placeholder="******">
 
                 <button class="btn" onclick="cadastrar()">Cadastrar</button>
@@ -66,10 +73,7 @@
 </html>
 <script>
     function cadastrar() {
-        // aguardar();
-
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
+      
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -78,22 +82,20 @@
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Preencha todos os campos!";
 
-            // finalizarAguardar();
+            
             return false;
         }
         else {
             // setInterval(sumirMensagem, 5000)
         }
 
-        // Enviando o valor da nova input
+        
         fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar

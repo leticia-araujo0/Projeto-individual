@@ -31,10 +31,10 @@
             <li> <a href="./index.html">Início</a></li>
             <li> <a href="./sig.html">O que são doramas?</a></li>
             <li> <a href="./login.html"> Login</a></li>
+            <li> <a href="./dicio.html"> Dicionário</a></li>
             <li> <a href="./cadastro.html">Seja membro</a></li>
         </ul>
     </header>
-
 
 
     <div class="alerta_erro">
@@ -53,24 +53,20 @@
                     <h1>Vote no melhor dorama!</h1>
                     <br>
                     <select class="votacao" id="sel_votacao1">
-                        <option value="">Indicados</option>
-                        <option value="vcvu">Vinte Cinco, Vinte Um</option>
-                        <option value="bp">Business Proposal</option>
-                        <option value="pck">Pachinko</option>
-                        <option value="tmr">Tomorrow</option>
-                        <option value="adv">Uma Advogada Extraordinária</option>
+                        <option value="">--Indicados--</option>
+                        <option value="Vinte Cinco, Vinte Um">Vinte Cinco, Vinte Um</option>
+                        <option value="Business Proposal">Business Proposal</option>
+                        <option value="Pachinko">Pachinko</option>
+                        <option value="Tomorrow">Tomorrow</option>
+                        <option value="Uma Advogada Extraordinária">Uma Advogada Extraordinária</option>
                     </select> <button class="btn" onclick="votar()">Votar!</button>
 
 
-                    
-                   
                     <div class="graph">
                         <canvas id="myChart"></canvas>
                     </div>
 
-                    <div class="avisoCaptura">
-                        <p id="avisoCaptura" style="color: white"></p>
-                    </div>
+
                 </div>
             </div>
 
@@ -84,13 +80,11 @@
                         </div>
 
                     </div>
-                    <!--end footer col-->
-                    <!-- footer col-->
+
                     <div class="footer-col">
                         <h4>MeloDoramática &copy; 2022 &hearts; Desenvolvido por Letícia Santos &hearts;</h4>
                     </div>
-                    <!--end footer col-->
-                    <!-- footer col-->
+
                     <div class="logos">
                         <h5>Segue a gente!</h5>
                         <ul>
@@ -134,15 +128,13 @@
             // setInterval(sumirMensagem, 5000)
         }
 
-        // Enviando o valor da nova input
         fetch(`/usuarios/votar/${idusuario}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+
                 categoria1Server: categoria1Var
 
             })
@@ -172,28 +164,16 @@
         return false;
     }
 
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-
-
-
-    // adicionei hoje sábado essa parte
-
-    // let proximaAtualizacao;
 
     window.onload = obterDadosGrafico();
 
-    
-    // function alterarTitulo(idCategoria) {
-    //     var tituloCategoria = document.getElementById("tituloCategoria")
-    //     tituloCategoria.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>categoria " + idCategoria + "</span>"
-    // }
+
 
     // gráficos das enquetes
 
     function obterDadosGrafico() {
         console.log(`Obter dados gráficos`)
-        
+
         fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
 
@@ -212,9 +192,7 @@
             });
     }
 
-    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+
     function plotarGrafico(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
@@ -228,13 +206,13 @@
                 label: 'Votos',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 150, 88)',
-                // tension: 0.1
+                backgroundColor: 'rgb(210,105,30)',
+                tension: 0.1
             },
-           ]
+            ]
         };
 
-        
+
         console.log(resposta)
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
