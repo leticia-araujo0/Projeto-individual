@@ -45,22 +45,6 @@ li :hover {
   color: #faebd7;
   transition: 0.3s all;
 }
-
-.a_curiosidade {
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 20px;
-  width: 900px;
-  height: 900px;
-
-}
-
-.a_curiosidade:hover {
-  background-color: #faebd7;
-  color: black;
-  cursor: pointer;
-}
-
 main {
   display: flex;
   flex-direction: row;
@@ -74,7 +58,7 @@ main {
 }
 
 .container .card {
-  /* background-color: #e6bc18; */
+  background-color: #e6bc18;
   height: 500px;
   width: 400px;
   display: flex;
@@ -165,7 +149,7 @@ input {
 }
 
 button:hover {
-  background-color: #FFF8DC;
+  background-color: white;
   color: #e6bc18;
 }
 

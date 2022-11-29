@@ -48,21 +48,6 @@ li :hover {
   transition: 0.3s all;
 }
 
-.a_curiosidade {
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 20px;
-  width: 900px;
-  height: 900px;
-
-}
-
-.a_curiosidade:hover {
-  background-color: #faebd7;
-  color: black;
-  cursor: pointer;
-}
-
 main {
   display: flex;
   flex-direction: row;
@@ -98,7 +83,7 @@ button:hover {
 }
 
 .banner .container .card {
-  /* background-color: #e6bc18; */
+  background-color: #e6bc18;
   height: 350px;
   width: 450px;
   display: flex;
@@ -117,11 +102,11 @@ button:hover {
 }
 
 .card h1 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .card h4 {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .banner #div_erros_login {
